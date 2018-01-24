@@ -1209,5 +1209,11 @@ Legendary Actions:
 
             }
         }
+
+        private void btnMerge_Click(object sender, EventArgs e)
+        {
+            monsterList = FileHandler.MergeList(monsterList);
+            RefreshMonsterList();
+        }
     }
 }

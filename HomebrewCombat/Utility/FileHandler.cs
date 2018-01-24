@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using HomebrewCombat.Models;
+using System.Linq;
 
 namespace HomebrewCombat
 {
@@ -78,6 +79,73 @@ namespace HomebrewCombat
             }
         }
 
+        public static List<Monster> MergeList(List<Monster> oldList)
+        {
+            List<Monster> monsterList = new List<Monster>();
+            monsterList.AddRange(oldList);
+
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Open Image";
+                dlg.Filter = "XML files (*.xml) | *.xml;";
+
+
+                DialogResult result = dlg.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    var serializer = new XmlSerializer(typeof(List<Monster>));
+                    var newList = new List<Monster>();
+
+                    if (File.Exists(dlg.FileName))
+                    {
+                        using (var stream = new StreamReader(dlg.FileName))
+                        {
+                            newList = (List<Monster>)serializer.Deserialize(stream);
+
+                        }
+                        
+                        Monster newMonster = new Monster();
+                        foreach (var monster in newList)
+                        {
+                            Monster existing = monsterList.FirstOrDefault(x => x.name == monster.name);
+
+                            if (existing == null)
+                            {
+                                monsterList.Add(monster);
+                            }
+
+
+                        }
+
+                    }
+
+
+                    
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+            return monsterList;
+        }
 
         public static List<Monster> GetMonsterListFromFile()
         {
@@ -118,7 +186,20 @@ namespace HomebrewCombat
 
         public static List<Monster> GetMonsterListFromWeb()
         {
+            List<Monster> monsterList = new List<Monster>();
             var url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Monster%20Manual%20Bestiary.xml";
+            
+            monsterList = GetMonsterManual(url);
+            url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Curse%20of%20Strahd%20Bestiary.xml";
+            monsterList.AddRange(GetMonsterManual(url));
+
+            return monsterList;
+
+        }
+
+        public static List<Monster> GetMonsterManual(string url)
+        {
+            
             var xml = "";
 
             using (var client = new WebClient())
@@ -231,9 +312,9 @@ namespace HomebrewCombat
 
                             foreach (XmlNode text in trait.SelectNodes("text"))
                             {
-                                
+
                                 textList.Add(text.InnerText);
-                                
+
 
                             }
 
@@ -420,18 +501,16 @@ namespace HomebrewCombat
                         spells = spells,
                         slots = slots,
                         initiative = initiative
-                    
+
 
                     });
                 }
             }
 
-           
+
 
             return monsterList;
         }
-
-
 
 
     }

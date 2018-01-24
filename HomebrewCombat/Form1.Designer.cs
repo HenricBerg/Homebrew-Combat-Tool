@@ -63,6 +63,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnTiles = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnMerge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDownload
@@ -397,12 +398,23 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "(Double-click for combat-stats)";
             // 
+            // btnMerge
+            // 
+            this.btnMerge.Location = new System.Drawing.Point(592, 503);
+            this.btnMerge.Name = "btnMerge";
+            this.btnMerge.Size = new System.Drawing.Size(120, 23);
+            this.btnMerge.TabIndex = 68;
+            this.btnMerge.Text = "Merge Local XML";
+            this.btnMerge.UseVisualStyleBackColor = true;
+            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(925, 532);
+            this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTiles);
             this.Controls.Add(this.btnSearch);
@@ -484,6 +496,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnTiles;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnMerge;
     }
 }
 
