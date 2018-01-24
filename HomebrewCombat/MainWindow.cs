@@ -280,7 +280,7 @@ namespace HomebrewCombat
         public void DownloadDatabase()
         {
             MessageBox.Show("ALWAYS make sure have a backup of your current database before proceeding with this step.");
-            DialogResult dialogResult = MessageBox.Show("This action will take some time, and will reset the database to its original state. Are you sure you want to continiue?", "Are you sure?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("This action will take some time. Are you sure you want to continiue?", "Are you sure?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 monsterList = FileHandler.GetMonsterListFromWeb();
@@ -1227,6 +1227,18 @@ Legendary Actions:
         private void MainWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to save your current database?", "Save?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                FileHandler.SaveMonsterListToFileAs(monsterList);
+
+
+                MessageBox.Show("Save successful. Goodbye!");
+            }
         }
     }
 }
