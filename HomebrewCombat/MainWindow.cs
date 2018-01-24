@@ -21,10 +21,10 @@ namespace HomebrewCombat
         {
 
             InitializeComponent();
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            
 
 
-            monsterList = FileHandler.GetMonsterListFromFile();
+            
             monsterCombatants = FileHandler.GetCombatantListFromFile();
 
 
@@ -270,7 +270,14 @@ namespace HomebrewCombat
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDBMenu_Click(object sender, EventArgs e)
+        {
+            MainMenu menu = new MainMenu();
+            menu.Show();
+
+        }
+
+        public void DownloadDatabase()
         {
             MessageBox.Show("ALWAYS make sure have a backup of your current database before proceeding with this step.");
             DialogResult dialogResult = MessageBox.Show("This action will take some time, and will reset the database to its original state. Are you sure you want to continiue?", "Are you sure?", MessageBoxButtons.YesNo);
@@ -286,7 +293,6 @@ namespace HomebrewCombat
             rtboxDetails.Clear();
             RefreshMonsterList();
             txtModifyHP.Text = "0";
-
 
 
         }
@@ -345,8 +351,8 @@ namespace HomebrewCombat
 
         public void RefreshMonsterList()
         {
-            FileHandler.SaveMonsterListToFile(monsterList);
-            monsterList = FileHandler.GetMonsterListFromFile();
+            //FileHandler.SaveMonsterListToFile(monsterList); //Uncomment if you want to save every time the list refreshes
+            //monsterList = FileHandler.GetMonsterListFromSelectedFile(); //Uncomment if you want to select .xml every time the list refreshes
             int listIndex = lstMonsterList.SelectedIndex;
             lstMonsterList.Items.Clear();
 
@@ -1030,7 +1036,7 @@ Legendary Actions:
 
 
             FileHandler.SaveCombatantListToFile(monsterCombatants);
-            FileHandler.SaveMonsterListToFile(monsterList);
+            
 
 
             ManualMonster newForm = new ManualMonster(this, monster);
@@ -1210,10 +1216,17 @@ Legendary Actions:
             }
         }
 
-        private void btnMerge_Click(object sender, EventArgs e)
+       
+
+        public void Merge()
         {
             monsterList = FileHandler.MergeList(monsterList);
             RefreshMonsterList();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

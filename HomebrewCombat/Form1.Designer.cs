@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.btnDownload = new System.Windows.Forms.Button();
+            this.btnDBMenu = new System.Windows.Forms.Button();
             this.lstMonsterList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rtboxDetails = new System.Windows.Forms.RichTextBox();
@@ -63,18 +63,17 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnTiles = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnMerge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnDownload
+            // btnDBMenu
             // 
-            this.btnDownload.Location = new System.Drawing.Point(250, 503);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(169, 23);
-            this.btnDownload.TabIndex = 21;
-            this.btnDownload.Text = "Download Monster Database";
-            this.btnDownload.UseVisualStyleBackColor = true;
-            this.btnDownload.Click += new System.EventHandler(this.button1_Click);
+            this.btnDBMenu.Location = new System.Drawing.Point(250, 503);
+            this.btnDBMenu.Name = "btnDBMenu";
+            this.btnDBMenu.Size = new System.Drawing.Size(169, 23);
+            this.btnDBMenu.TabIndex = 21;
+            this.btnDBMenu.Text = "Database Functions";
+            this.btnDBMenu.UseVisualStyleBackColor = true;
+            this.btnDBMenu.Click += new System.EventHandler(this.btnDBMenu_Click);
             // 
             // lstMonsterList
             // 
@@ -398,23 +397,12 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "(Double-click for combat-stats)";
             // 
-            // btnMerge
-            // 
-            this.btnMerge.Location = new System.Drawing.Point(592, 503);
-            this.btnMerge.Name = "btnMerge";
-            this.btnMerge.Size = new System.Drawing.Size(120, 23);
-            this.btnMerge.TabIndex = 68;
-            this.btnMerge.Text = "Merge Local XML";
-            this.btnMerge.UseVisualStyleBackColor = true;
-            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(925, 532);
-            this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTiles);
             this.Controls.Add(this.btnSearch);
@@ -448,13 +436,15 @@
             this.Controls.Add(this.rtboxDetails);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstMonsterList);
-            this.Controls.Add(this.btnDownload);
+            this.Controls.Add(this.btnDBMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Henric\'s D&D 5th Edition GM-Tool";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,7 +452,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDownload;
+        private System.Windows.Forms.Button btnDBMenu;
         private System.Windows.Forms.ListBox lstMonsterList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtboxDetails;
@@ -496,7 +486,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnTiles;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnMerge;
     }
 }
 
