@@ -21,10 +21,10 @@ namespace HomebrewCombat
         {
 
             InitializeComponent();
-            
 
 
-            
+
+
             monsterCombatants = FileHandler.GetCombatantListFromFile();
 
 
@@ -470,7 +470,7 @@ namespace HomebrewCombat
             {
                 lstCombat.Items.Add("ID#" + combatant.ID + ": " + combatant.name + ", HP: " + combatant.HP + "  -  Init: " + combatant.initiative);
 
-               
+
 
                 Form form = Application.OpenForms[combatant.ID.ToString()];
                 if (form != null)
@@ -478,10 +478,10 @@ namespace HomebrewCombat
                     CombatStatUI statUI = (CombatStatUI)form;
                     statUI.Refresh(combatant);
                 }
-                
 
 
-                
+
+
 
 
             }
@@ -689,7 +689,7 @@ Legendary Actions:
                 {
                     form.Dispose();
                 }
-                
+
 
 
                 RefreshCombatList();
@@ -802,21 +802,21 @@ Legendary Actions:
                     {
                         CombatStatUI statUI = (CombatStatUI)form;
                         if (HPChange < 0)
-                        { 
-                            
+                        {
+
                             statUI.AnimateCombat();
                         }
                         else if (HPChange > 0)
                         {
                             statUI.AnimateHeal();
                         }
-                        
+
                         if (combatant.HP < 1)
                         {
                             statUI.Death();
                         }
 
-                        
+
                     }
 
 
@@ -919,7 +919,7 @@ Legendary Actions:
         {
 
             ShowCondition();
-            
+
         }
 
         private void lstCombat_Click(object sender, EventArgs e)
@@ -980,37 +980,37 @@ Legendary Actions:
             }
             else
             {
-                
-                    int indexStart = lstCombat.SelectedItem.ToString().IndexOf("#");
-                    int indexStop = lstCombat.SelectedItem.ToString().IndexOf(":");
-                    Combatant combatant = monsterCombatants.Single(x => x.ID.ToString() == lstCombat.SelectedItem.ToString().Substring((indexStart + 1), (indexStop - 3)));
 
-                    List<Condition> conditionList;
+                int indexStart = lstCombat.SelectedItem.ToString().IndexOf("#");
+                int indexStop = lstCombat.SelectedItem.ToString().IndexOf(":");
+                Combatant combatant = monsterCombatants.Single(x => x.ID.ToString() == lstCombat.SelectedItem.ToString().Substring((indexStart + 1), (indexStop - 3)));
+
+                List<Condition> conditionList;
 
 
-                    try
+                try
+                {
+                    conditionList = combatant.conditions;
+                    conditionList.RemoveAll(x => x.name == lstCombatantConditions.SelectedItem.ToString());
+                    lstCombatantConditions.Items.Clear();
+                    foreach (var condition in conditionList)
                     {
-                        conditionList = combatant.conditions;
-                        conditionList.RemoveAll(x => x.name == lstCombatantConditions.SelectedItem.ToString());
-                        lstCombatantConditions.Items.Clear();
-                        foreach (var condition in conditionList)
-                        {
-                            lstCombatantConditions.Items.Add(condition.name);
-                        }
-
-                    }
-                    catch
-                    {
-                        conditionList = new List<Condition>();
-
-
+                        lstCombatantConditions.Items.Add(condition.name);
                     }
 
+                }
+                catch
+                {
+                    conditionList = new List<Condition>();
 
 
-                    combatant.conditions = conditionList;
+                }
 
-                
+
+
+                combatant.conditions = conditionList;
+
+
 
                 RefreshCombatList();
             }
@@ -1036,7 +1036,7 @@ Legendary Actions:
 
 
             FileHandler.SaveCombatantListToFile(monsterCombatants);
-            
+
 
 
             ManualMonster newForm = new ManualMonster(this, monster);
@@ -1158,8 +1158,20 @@ Legendary Actions:
 
         private void btnTiles_Click(object sender, EventArgs e)
         {
-            MapTileUI mapTileUI = new MapTileUI();
-            mapTileUI.Show();
+            
+                MapTileUI mapTileUI = new MapTileUI();
+                mapTileUI.Show();
+           
+        }
+
+        public void Reset()
+        {
+            DialogResult dialogResult = MessageBox.Show("This will clear your currently loaded database. It will NOT delete any saved files. Proceed?", "Are you sure?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                monsterList.Clear();
+                RefreshMonsterList();
+            }
         }
 
         private void lstCombat_DoubleClick(object sender, EventArgs e)
@@ -1216,7 +1228,7 @@ Legendary Actions:
             }
         }
 
-       
+
 
         public void Merge()
         {

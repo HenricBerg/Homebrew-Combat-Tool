@@ -42,5 +42,10 @@ namespace HomebrewCombat
             Program.mainForm.RefreshMonsterList();
             Dispose();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Program.mainForm.Reset();
+        }
     }
 }

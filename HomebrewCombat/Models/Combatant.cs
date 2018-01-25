@@ -8,7 +8,7 @@ namespace HomebrewCombat
 {
     public class Combatant
     {
-        publc string test { get; set }
+        
         public string name { get; set; }
         public string initiative { get; set; }
         public int ID { get; set; }
