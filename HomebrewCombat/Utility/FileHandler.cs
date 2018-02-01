@@ -19,79 +19,107 @@ namespace HomebrewCombat
 
         public static void SaveMonsterListToFileAs(List<Monster> monsterList)
         {
-            var serializer = new XmlSerializer(typeof(List<Monster>));
 
-            using (SaveFileDialog dlg = new SaveFileDialog())
+            try
             {
-                dlg.Title = "Save XML";
-                dlg.Filter = "XML files (*.xml) | *.xml;";
-                dlg.FileName = "monstermanual.xml";
+                var serializer = new XmlSerializer(typeof(List<Monster>));
 
-                if (dlg.ShowDialog() == DialogResult.OK)
+                using (SaveFileDialog dlg = new SaveFileDialog())
                 {
-                    using (var stream = new StreamWriter(dlg.FileName))
+                    dlg.Title = "Save XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "monstermanual.xml";
+
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        serializer.Serialize(stream, monsterList);
+                        using (var stream = new StreamWriter(dlg.FileName))
+                        {
+                            serializer.Serialize(stream, monsterList);
 
 
+                        }
                     }
-                }
 
+                }
             }
+            catch
+            {
+                MessageBox.Show("WARNING! Save unsuccessful, try again!");
+            }
+           
+           
 
 
 
         }
-        //public static void SaveMonsterListToFile(List<Monster> monsterList) //not needed. might need it. saving it.
-        //{
-        //    var serializer = new XmlSerializer(typeof(List<Monster>));
 
 
 
-
-
-        //    using (var stream = new StreamWriter("monstermanual.xml"))
-        //    {
-        //        serializer.Serialize(stream, monsterList);
-
-
-        //    }
-
-
-
-        //}
-
-
-        public static void SaveDungeonLayoutToFile(List<ImageSource> imageList)
+        public static void SaveDungeonLayoutToFileAs(List<ImageSource> imageList)
         {
-            var serializer = new XmlSerializer(typeof(List<ImageSource>));
-
-            if (!Directory.Exists(@"dungeonlayout"))
+            try
             {
-                Directory.CreateDirectory(@"dungeonlayout");
-            }
+                var serializer = new XmlSerializer(typeof(List<ImageSource>));
 
-            using (var stream = new StreamWriter(@"dungeonlayout\dungeonlayout.xml"))
+                using (SaveFileDialog dlg = new SaveFileDialog())
+                {
+                    dlg.Title = "Save XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "dungeonlayout.xml";
+
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var stream = new StreamWriter(dlg.FileName))
+                        {
+                            serializer.Serialize(stream, imageList);
+
+
+                        }
+                    }
+
+                }
+            }
+            catch
             {
-                serializer.Serialize(stream, imageList);
-
-
+                MessageBox.Show("WARNING! Save unsuccessful, try again!");
             }
+            
         }
 
         public static List<ImageSource> GetImageLayoutFromFile()
         {
-            var serializer = new XmlSerializer(typeof(List<ImageSource>));
             var imageList = new List<ImageSource>();
-
-            if (File.Exists(@"dungeonlayout\dungeonlayout.xml"))
+            try
             {
-                using (var stream = new StreamReader(@"dungeonlayout\dungeonlayout.xml"))
-                {
-                    imageList = (List<ImageSource>)serializer.Deserialize(stream);
+                var serializer = new XmlSerializer(typeof(List<ImageSource>));
 
+
+                using (OpenFileDialog dlg = new OpenFileDialog())
+                {
+                    dlg.Title = "Load XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "dungeonlayout.xml";
+
+                    DialogResult result = dlg.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        if (File.Exists(dlg.FileName))
+                        {
+                            using (var stream = new StreamReader(dlg.FileName))
+                            {
+                                imageList = (List<ImageSource>)serializer.Deserialize(stream);
+
+                            }
+                        }
+                    }
                 }
             }
+            catch
+            {
+                MessageBox.Show("WARNING! Load unsuccessful, try again.");
+            }
+            
 
 
             return imageList;
@@ -112,65 +140,56 @@ namespace HomebrewCombat
 
         public static List<Monster> MergeList(List<Monster> oldList)
         {
+
             List<Monster> monsterList = new List<Monster>();
-            monsterList.AddRange(oldList);
-
-            using (OpenFileDialog dlg = new OpenFileDialog())
+            try
             {
-                dlg.Title = "Select XML to Merge";
-                dlg.Filter = "XML files (*.xml) | *.xml;";
+                
+                monsterList.AddRange(oldList);
 
-
-                DialogResult result = dlg.ShowDialog();
-
-                if (result == DialogResult.OK)
+                using (OpenFileDialog dlg = new OpenFileDialog())
                 {
-                    var serializer = new XmlSerializer(typeof(List<Monster>));
-                    var newList = new List<Monster>();
+                    dlg.Title = "Select XML to Merge";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
 
-                    if (File.Exists(dlg.FileName))
+
+                    DialogResult result = dlg.ShowDialog();
+
+                    if (result == DialogResult.OK)
                     {
-                        using (var stream = new StreamReader(dlg.FileName))
+                        var serializer = new XmlSerializer(typeof(List<Monster>));
+                        var newList = new List<Monster>();
+
+                        if (File.Exists(dlg.FileName))
                         {
-                            newList = (List<Monster>)serializer.Deserialize(stream);
-
-                        }
-
-                        Monster newMonster = new Monster();
-                        foreach (var monster in newList)
-                        {
-                            Monster existing = monsterList.FirstOrDefault(x => x.name == monster.name);
-
-                            if (existing == null)
+                            using (var stream = new StreamReader(dlg.FileName))
                             {
-                                monsterList.Add(monster);
+                                newList = (List<Monster>)serializer.Deserialize(stream);
+
                             }
 
+                            Monster newMonster = new Monster();
+                            foreach (var monster in newList)
+                            {
+                                Monster existing = monsterList.FirstOrDefault(x => x.name == monster.name);
+
+                                if (existing == null)
+                                {
+                                    monsterList.Add(monster);
+                                }
+
+
+                            }
 
                         }
-
                     }
-
-
-
-
-
-
-
-
                 }
-
-
-
-
-
-
-
-
-
-
-
             }
+            catch
+            {
+                MessageBox.Show("WARNING! Merge unsuccessful, try again.");
+            }
+           
 
 
 
@@ -178,48 +197,40 @@ namespace HomebrewCombat
             return monsterList;
         }
 
-        //public static List<Monster> GetMonsterListFromFile() //Made obsolete. Saving it. Just in case.
-        //{
-        //    var serializer = new XmlSerializer(typeof(List<Monster>));
-        //    var monsterList = new List<Monster>();
-
-        //    if (File.Exists("monstermanual.xml"))
-        //    {
-        //        using (var stream = new StreamReader("monstermanual.xml"))
-        //        {
-        //            monsterList = (List<Monster>)serializer.Deserialize(stream);
-
-        //        }
-        //    }
-
-
-        //    return monsterList;
-        //}
 
         public static List<Monster> GetMonsterListFromSelectedFile()
         {
-            var serializer = new XmlSerializer(typeof(List<Monster>));
+            
             var monsterList = new List<Monster>();
-
-            using (OpenFileDialog dlg = new OpenFileDialog())
+            try
             {
-                dlg.Title = "Load XML";
-                dlg.Filter = "XML files (*.xml) | *.xml;";
-                dlg.FileName = "monstermanual.xml";
-
-                DialogResult result = dlg.ShowDialog();
-
-                if (result == DialogResult.OK)
+                var serializer = new XmlSerializer(typeof(List<Monster>));
+                using (OpenFileDialog dlg = new OpenFileDialog())
                 {
-                    if (File.Exists(dlg.FileName))
-                    {
-                        using (var stream = new StreamReader(dlg.FileName))
-                        {
-                            monsterList = (List<Monster>)serializer.Deserialize(stream);
+                    dlg.Title = "Load XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "monstermanual.xml";
 
+                    DialogResult result = dlg.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        if (File.Exists(dlg.FileName))
+                        {
+                            using (var stream = new StreamReader(dlg.FileName))
+                            {
+                                monsterList = (List<Monster>)serializer.Deserialize(stream);
+
+                            }
                         }
                     }
                 }
+            }
+            
+            
+            catch
+            {
+                MessageBox.Show("WARNING! Load unsuccessful, try again.");
             }
 
 
@@ -248,11 +259,21 @@ namespace HomebrewCombat
         public static List<Monster> GetMonsterListFromWeb()
         {
             List<Monster> monsterList = new List<Monster>();
-            var url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Monster%20Manual%20Bestiary.xml";
+            try
+            {
+               
+                var url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Monster%20Manual%20Bestiary.xml";
 
-            monsterList = GetMonsterManual(url);
-            url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Curse%20of%20Strahd%20Bestiary.xml";
-            monsterList.AddRange(GetMonsterManual(url));
+                monsterList = GetMonsterManual(url);
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Curse%20of%20Strahd%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                MessageBox.Show("The database has been downloaded.");
+            }
+            catch
+            {
+                MessageBox.Show("Download unsuccessful.");
+            }
+            
 
             return monsterList;
 

@@ -16,7 +16,7 @@ namespace HomebrewCombat
 {
     public partial class MapTileUI : Form
     {
-        List<ImageSource> imageList;
+        List<ImageSource> imageList = new List<ImageSource>();
 
 
 
@@ -25,7 +25,7 @@ namespace HomebrewCombat
         {
             
             InitializeComponent();
-            imageList = FileHandler.GetImageLayoutFromFile();
+            
             
 
 
@@ -69,7 +69,7 @@ namespace HomebrewCombat
                     }
                     else
                     {
-                        FileHandler.SaveDungeonLayoutToFile(imageList);
+                        
 
                         File.Copy(dlg.FileName, Path.Combine("dungeonlayout", Path.GetFileName(dlg.FileName)), false);
 
@@ -3404,7 +3404,11 @@ namespace HomebrewCombat
                 if (x is PictureBox)
                 {
                     ImageSource image = imageList.FirstOrDefault(z => z.name == x.Name);
-                    RefreshTile((PictureBox)x, image);
+                    if (image != null)
+                    {
+                        RefreshTile((PictureBox)x, image);
+                    }
+                    
 
 
                 }
@@ -3416,7 +3420,7 @@ namespace HomebrewCombat
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            FileHandler.SaveDungeonLayoutToFile(imageList);
+            FileHandler.SaveDungeonLayoutToFileAs(imageList);
 
 
 
@@ -3450,7 +3454,7 @@ namespace HomebrewCombat
                 }
             }
 
-            FileHandler.SaveDungeonLayoutToFile(imageList);
+            
 
         }
 
@@ -3474,6 +3478,18 @@ namespace HomebrewCombat
 
 
 
+        }
+
+        private void MapTileUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to save your current layout?", "Save?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                FileHandler.SaveDungeonLayoutToFileAs(imageList);
+
+
+                MessageBox.Show("Save successful. Goodbye!");
+            }
         }
     }
 }

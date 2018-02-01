@@ -2215,6 +2215,7 @@
             this.Name = "MapTileUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dungeon Layout";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MapTileUI_FormClosing);
             this.Load += new System.EventHandler(this.MapTileUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb10x16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb10x15)).EndInit();

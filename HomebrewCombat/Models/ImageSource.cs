@@ -9,8 +9,8 @@ namespace HomebrewCombat.Models
     public class ImageSource
     {
 
-        public string name { get; set; }
-        public string path { get; set; }
+        public string name { get; set; } = "";
+        public string path { get; set; } = "";
         public bool visible { get; set; } = true;
 
 

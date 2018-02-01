@@ -286,7 +286,7 @@ namespace HomebrewCombat
                 monsterList = FileHandler.GetMonsterListFromWeb();
 
 
-                MessageBox.Show("The database has been downloaded.");
+               
             }
 
             lstMonsterList.Items.Clear();
