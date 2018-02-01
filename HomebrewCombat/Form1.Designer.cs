@@ -169,6 +169,7 @@
             this.txtModifyHP.Name = "txtModifyHP";
             this.txtModifyHP.Size = new System.Drawing.Size(100, 20);
             this.txtModifyHP.TabIndex = 8;
+            this.txtModifyHP.TextChanged += new System.EventHandler(this.txtModifyHP_TextChanged);
             // 
             // label3
             // 
@@ -178,6 +179,7 @@
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 43;
             this.label3.Text = "Add/Reduce HP:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnModifyCombatant
             // 
@@ -284,6 +286,7 @@
             this.rbtnN10.TabIndex = 9;
             this.rbtnN10.Text = " -10";
             this.rbtnN10.UseVisualStyleBackColor = true;
+            this.rbtnN10.CheckedChanged += new System.EventHandler(this.rbtnN10_CheckedChanged);
             // 
             // rbtnN5
             // 
@@ -294,6 +297,7 @@
             this.rbtnN5.TabIndex = 10;
             this.rbtnN5.Text = " -5";
             this.rbtnN5.UseVisualStyleBackColor = true;
+            this.rbtnN5.CheckedChanged += new System.EventHandler(this.rbtnN5_CheckedChanged);
             // 
             // rbtnN1
             // 
@@ -304,6 +308,7 @@
             this.rbtnN1.TabIndex = 11;
             this.rbtnN1.Text = " -1";
             this.rbtnN1.UseVisualStyleBackColor = true;
+            this.rbtnN1.CheckedChanged += new System.EventHandler(this.rbtnN1_CheckedChanged);
             // 
             // rbtnP10
             // 
@@ -314,6 +319,7 @@
             this.rbtnP10.TabIndex = 12;
             this.rbtnP10.Text = "+10";
             this.rbtnP10.UseVisualStyleBackColor = true;
+            this.rbtnP10.CheckedChanged += new System.EventHandler(this.rbtnP10_CheckedChanged);
             // 
             // rbtnP5
             // 
@@ -324,6 +330,7 @@
             this.rbtnP5.TabIndex = 13;
             this.rbtnP5.Text = "+5";
             this.rbtnP5.UseVisualStyleBackColor = true;
+            this.rbtnP5.CheckedChanged += new System.EventHandler(this.rbtnP5_CheckedChanged);
             // 
             // rbtnP1
             // 
@@ -334,6 +341,7 @@
             this.rbtnP1.TabIndex = 14;
             this.rbtnP1.Text = "+1";
             this.rbtnP1.UseVisualStyleBackColor = true;
+            this.rbtnP1.CheckedChanged += new System.EventHandler(this.rbtnP1_CheckedChanged);
             // 
             // rbtnManual
             // 

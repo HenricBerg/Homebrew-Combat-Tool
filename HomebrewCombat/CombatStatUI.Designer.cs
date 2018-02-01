@@ -41,6 +41,14 @@
             this.tmrAnimateCombat = new System.Windows.Forms.Timer(this.components);
             this.tmrAnimateHeal = new System.Windows.Forms.Timer(this.components);
             this.pbxExp = new System.Windows.Forms.PictureBox();
+            this.rbtnP1 = new System.Windows.Forms.RadioButton();
+            this.rbtnP5 = new System.Windows.Forms.RadioButton();
+            this.rbtnP10 = new System.Windows.Forms.RadioButton();
+            this.rbtnN1 = new System.Windows.Forms.RadioButton();
+            this.rbtnN5 = new System.Windows.Forms.RadioButton();
+            this.rbtnN10 = new System.Windows.Forms.RadioButton();
+            this.btnModifyCombatant = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,12 +146,101 @@
             this.pbxExp.TabIndex = 9;
             this.pbxExp.TabStop = false;
             // 
+            // rbtnP1
+            // 
+            this.rbtnP1.AutoSize = true;
+            this.rbtnP1.Location = new System.Drawing.Point(101, 171);
+            this.rbtnP1.Name = "rbtnP1";
+            this.rbtnP1.Size = new System.Drawing.Size(37, 17);
+            this.rbtnP1.TabIndex = 67;
+            this.rbtnP1.Text = "+1";
+            this.rbtnP1.UseVisualStyleBackColor = true;
+            // 
+            // rbtnP5
+            // 
+            this.rbtnP5.AutoSize = true;
+            this.rbtnP5.Location = new System.Drawing.Point(61, 171);
+            this.rbtnP5.Name = "rbtnP5";
+            this.rbtnP5.Size = new System.Drawing.Size(37, 17);
+            this.rbtnP5.TabIndex = 66;
+            this.rbtnP5.Text = "+5";
+            this.rbtnP5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnP10
+            // 
+            this.rbtnP10.AutoSize = true;
+            this.rbtnP10.Location = new System.Drawing.Point(15, 171);
+            this.rbtnP10.Name = "rbtnP10";
+            this.rbtnP10.Size = new System.Drawing.Size(43, 17);
+            this.rbtnP10.TabIndex = 65;
+            this.rbtnP10.Text = "+10";
+            this.rbtnP10.UseVisualStyleBackColor = true;
+            // 
+            // rbtnN1
+            // 
+            this.rbtnN1.AutoSize = true;
+            this.rbtnN1.Location = new System.Drawing.Point(101, 156);
+            this.rbtnN1.Name = "rbtnN1";
+            this.rbtnN1.Size = new System.Drawing.Size(37, 17);
+            this.rbtnN1.TabIndex = 64;
+            this.rbtnN1.Text = " -1";
+            this.rbtnN1.UseVisualStyleBackColor = true;
+            // 
+            // rbtnN5
+            // 
+            this.rbtnN5.AutoSize = true;
+            this.rbtnN5.Location = new System.Drawing.Point(61, 156);
+            this.rbtnN5.Name = "rbtnN5";
+            this.rbtnN5.Size = new System.Drawing.Size(37, 17);
+            this.rbtnN5.TabIndex = 63;
+            this.rbtnN5.Text = " -5";
+            this.rbtnN5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnN10
+            // 
+            this.rbtnN10.AutoSize = true;
+            this.rbtnN10.Location = new System.Drawing.Point(15, 156);
+            this.rbtnN10.Name = "rbtnN10";
+            this.rbtnN10.Size = new System.Drawing.Size(43, 17);
+            this.rbtnN10.TabIndex = 62;
+            this.rbtnN10.Text = " -10";
+            this.rbtnN10.UseVisualStyleBackColor = true;
+            // 
+            // btnModifyCombatant
+            // 
+            this.btnModifyCombatant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifyCombatant.Location = new System.Drawing.Point(144, 156);
+            this.btnModifyCombatant.Name = "btnModifyCombatant";
+            this.btnModifyCombatant.Size = new System.Drawing.Size(135, 32);
+            this.btnModifyCombatant.TabIndex = 68;
+            this.btnModifyCombatant.Text = "Apply HP-Change!";
+            this.btnModifyCombatant.UseVisualStyleBackColor = true;
+            this.btnModifyCombatant.Click += new System.EventHandler(this.btnModifyCombatant_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.TabIndex = 69;
+            this.label1.Text = "Add/Reduce HP:";
+            // 
             // CombatStatUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(278, 151);
+            this.ClientSize = new System.Drawing.Size(283, 193);
+            this.Controls.Add(this.rbtnP1);
+            this.Controls.Add(this.rbtnP5);
+            this.Controls.Add(this.rbtnP10);
+            this.Controls.Add(this.rbtnN1);
+            this.Controls.Add(this.rbtnN5);
+            this.Controls.Add(this.rbtnN10);
+            this.Controls.Add(this.btnModifyCombatant);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pbxExp);
             this.Controls.Add(this.lblSave);
             this.Controls.Add(this.lblHP);
@@ -177,5 +274,13 @@
         private System.Windows.Forms.PictureBox pbxExp;
         private System.Windows.Forms.Timer tmrAnimateCombat;
         private System.Windows.Forms.Timer tmrAnimateHeal;
+        private System.Windows.Forms.RadioButton rbtnP1;
+        private System.Windows.Forms.RadioButton rbtnP5;
+        private System.Windows.Forms.RadioButton rbtnP10;
+        private System.Windows.Forms.RadioButton rbtnN1;
+        private System.Windows.Forms.RadioButton rbtnN5;
+        private System.Windows.Forms.RadioButton rbtnN10;
+        private System.Windows.Forms.Button btnModifyCombatant;
+        private System.Windows.Forms.Label label1;
     }
 }

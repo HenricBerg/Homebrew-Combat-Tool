@@ -1252,5 +1252,45 @@ Legendary Actions:
                 MessageBox.Show("Save successful. Goodbye!");
             }
         }
+
+        private void rbtnP1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnP5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnP10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnN1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnN5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnN10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtModifyHP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

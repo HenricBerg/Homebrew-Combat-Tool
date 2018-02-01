@@ -15,6 +15,7 @@ namespace HomebrewCombat
     {
         private int animateCombatCount = 1;
         private int animateHealCount = 1;
+        List<Combatant> combatantList = FileHandler.GetCombatantListFromFile();
 
         public CombatStatUI(Combatant combatant)
         {
@@ -48,9 +49,16 @@ namespace HomebrewCombat
 
         private void CombatStatUI_Load(object sender, EventArgs e)
         {
-            var _point = new System.Drawing.Point(Cursor.Position.X, Cursor.Position.Y);
+
+           combatantList = FileHandler.GetCombatantListFromFile();
+
+
+            var _point = new Point(Cursor.Position.X, Cursor.Position.Y);
             Top = _point.Y - 10;
             Left = _point.X - 40;
+
+
+
         }
 
         public void Death()
@@ -254,5 +262,80 @@ namespace HomebrewCombat
                     break;
             }
         }
+
+        private void btnModifyCombatant_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                int HPChange = 0;
+
+                if (rbtnN10.Checked)
+                {
+                    HPChange = -10;
+                }
+                if (rbtnN5.Checked)
+                {
+                    HPChange = -5;
+                }
+                if (rbtnN1.Checked)
+                {
+                    HPChange = -1;
+                }
+                if (rbtnP10.Checked)
+                {
+                    HPChange = 10;
+                }
+                if (rbtnP5.Checked)
+                {
+                    HPChange = 5;
+                }
+                if (rbtnP1.Checked)
+                {
+                    HPChange = 1;
+                }
+
+
+
+
+               
+            string[] stringArray = lblNameID.Text.Split(':');
+
+
+            
+            Combatant combatant = MainWindow.monsterCombatants.Single(x => x.ID.ToString() == stringArray[1].Trim(' '));
+
+            combatant.HP = combatant.HP + HPChange;
+
+            
+               
+                if (HPChange < 0)
+                {
+
+                    AnimateCombat();
+                }
+                else if (HPChange > 0)
+                {
+                    AnimateHeal();
+                }
+
+                if (combatant.HP < 1)
+                {
+                    Death();
+                }
+
+
+          
+
+
+            Program.mainForm.RefreshCombatList();
+        //}
+        //    catch
+        //    {
+
+        //        MessageBox.Show("HP-value must be an integer.");
+
+
+        //    }
+}
     }
 }
