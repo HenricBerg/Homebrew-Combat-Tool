@@ -265,8 +265,8 @@ namespace HomebrewCombat
 
         private void btnModifyCombatant_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 int HPChange = 0;
 
                 if (rbtnN10.Checked)
@@ -328,14 +328,14 @@ namespace HomebrewCombat
 
 
             Program.mainForm.RefreshCombatList();
-        //}
-        //    catch
-        //    {
+        }
+            catch
+            {
 
-        //        MessageBox.Show("HP-value must be an integer.");
+                MessageBox.Show("HP-value must be an integer.");
 
 
-        //    }
+            }
 }
     }
 }

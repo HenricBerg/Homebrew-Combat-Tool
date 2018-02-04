@@ -351,8 +351,7 @@ namespace HomebrewCombat
 
         public void RefreshMonsterList()
         {
-            //FileHandler.SaveMonsterListToFile(monsterList); //Uncomment if you want to save every time the list refreshes
-            //monsterList = FileHandler.GetMonsterListFromSelectedFile(); //Uncomment if you want to select .xml every time the list refreshes
+            
             int listIndex = lstMonsterList.SelectedIndex;
             lstMonsterList.Items.Clear();
 
