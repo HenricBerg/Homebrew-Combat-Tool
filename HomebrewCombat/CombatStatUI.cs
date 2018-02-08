@@ -34,6 +34,11 @@ namespace HomebrewCombat
 
         }
 
+        public void ColorSync()
+        {
+            richTextBox1.BackColor = BackColor;
+        }
+
         public void Refresh(Combatant combatant)
         {
 
@@ -56,6 +61,8 @@ namespace HomebrewCombat
             var _point = new Point(Cursor.Position.X, Cursor.Position.Y);
             Top = _point.Y - 10;
             Left = _point.X - 40;
+
+            
 
 
 

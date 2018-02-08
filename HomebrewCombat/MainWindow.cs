@@ -12,6 +12,7 @@ namespace HomebrewCombat
         public List<Monster> monsterList = new List<Monster>();
         public static List<Combatant> monsterCombatants = new List<Combatant>();
         public List<Condition> defaultConditions = new List<Condition>();
+        public List<Combatant> initiativeList = new List<Combatant>();
         public static int combatantID = 0;
 
 
@@ -313,6 +314,11 @@ namespace HomebrewCombat
                     CombatStatUI statUI = new CombatStatUI(combatant);
 
                     statUI.Show();
+                    Random rnd = new Random();
+                    Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    statUI.BackColor = randomColor;
+                    statUI.ColorSync();
+                    
                 }
                 else
                 {
@@ -320,6 +326,10 @@ namespace HomebrewCombat
                     CombatStatUI statUI = new CombatStatUI(combatant);
 
                     statUI.Show();
+                    Random rnd = new Random();
+                    Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    statUI.BackColor = randomColor;
+                    statUI.ColorSync();
                 }
 
 
@@ -433,7 +443,7 @@ namespace HomebrewCombat
             int listIndex = lstCombat.SelectedIndex;
             lstCombat.Items.Clear();
             Combatant highestInitCombatant = new Combatant();
-            var initiativeList = new List<Combatant>();
+            initiativeList.Clear();
             var compareList = new List<Combatant>();
             int highestInit = -1000;
             int index = 0;
@@ -1290,6 +1300,12 @@ Legendary Actions:
         private void txtModifyHP_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInitiative_Click(object sender, EventArgs e)
+        {
+            InitiativeUI initUI = new InitiativeUI();
+            initUI.Show();
         }
     }
 }

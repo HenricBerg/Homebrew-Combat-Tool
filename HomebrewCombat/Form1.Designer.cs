@@ -63,6 +63,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnTiles = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnInitiative = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDBMenu
@@ -165,7 +166,7 @@
             // 
             // txtModifyHP
             // 
-            this.txtModifyHP.Location = new System.Drawing.Point(612, 257);
+            this.txtModifyHP.Location = new System.Drawing.Point(612, 286);
             this.txtModifyHP.Name = "txtModifyHP";
             this.txtModifyHP.Size = new System.Drawing.Size(100, 20);
             this.txtModifyHP.TabIndex = 8;
@@ -174,7 +175,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(589, 241);
+            this.label3.Location = new System.Drawing.Point(589, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 43;
@@ -183,7 +184,7 @@
             // 
             // btnModifyCombatant
             // 
-            this.btnModifyCombatant.Location = new System.Drawing.Point(592, 321);
+            this.btnModifyCombatant.Location = new System.Drawing.Point(592, 350);
             this.btnModifyCombatant.Name = "btnModifyCombatant";
             this.btnModifyCombatant.Size = new System.Drawing.Size(120, 23);
             this.btnModifyCombatant.TabIndex = 15;
@@ -195,7 +196,7 @@
             // 
             this.lstCombatantConditions.FormattingEnabled = true;
             this.lstCombatantConditions.HorizontalScrollbar = true;
-            this.lstCombatantConditions.Location = new System.Drawing.Point(592, 386);
+            this.lstCombatantConditions.Location = new System.Drawing.Point(592, 415);
             this.lstCombatantConditions.Name = "lstCombatantConditions";
             this.lstCombatantConditions.Size = new System.Drawing.Size(120, 82);
             this.lstCombatantConditions.TabIndex = 16;
@@ -204,7 +205,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(589, 357);
+            this.label4.Location = new System.Drawing.Point(589, 386);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 13);
             this.label4.TabIndex = 46;
@@ -214,7 +215,7 @@
             // 
             this.lstDefaultConditions.FormattingEnabled = true;
             this.lstDefaultConditions.HorizontalScrollbar = true;
-            this.lstDefaultConditions.Location = new System.Drawing.Point(744, 269);
+            this.lstDefaultConditions.Location = new System.Drawing.Point(744, 298);
             this.lstDefaultConditions.Name = "lstDefaultConditions";
             this.lstDefaultConditions.Size = new System.Drawing.Size(169, 199);
             this.lstDefaultConditions.TabIndex = 17;
@@ -223,7 +224,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(741, 241);
+            this.label7.Location = new System.Drawing.Point(741, 270);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 48;
@@ -232,7 +233,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(741, 253);
+            this.label8.Location = new System.Drawing.Point(741, 282);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 13);
             this.label8.TabIndex = 49;
@@ -240,7 +241,7 @@
             // 
             // btnAddCondition
             // 
-            this.btnAddCondition.Location = new System.Drawing.Point(744, 474);
+            this.btnAddCondition.Location = new System.Drawing.Point(744, 503);
             this.btnAddCondition.Name = "btnAddCondition";
             this.btnAddCondition.Size = new System.Drawing.Size(169, 23);
             this.btnAddCondition.TabIndex = 18;
@@ -251,7 +252,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(589, 370);
+            this.label9.Location = new System.Drawing.Point(589, 399);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 13);
             this.label9.TabIndex = 51;
@@ -280,7 +281,7 @@
             // rbtnN10
             // 
             this.rbtnN10.AutoSize = true;
-            this.rbtnN10.Location = new System.Drawing.Point(592, 283);
+            this.rbtnN10.Location = new System.Drawing.Point(592, 312);
             this.rbtnN10.Name = "rbtnN10";
             this.rbtnN10.Size = new System.Drawing.Size(43, 17);
             this.rbtnN10.TabIndex = 9;
@@ -291,7 +292,7 @@
             // rbtnN5
             // 
             this.rbtnN5.AutoSize = true;
-            this.rbtnN5.Location = new System.Drawing.Point(638, 283);
+            this.rbtnN5.Location = new System.Drawing.Point(638, 312);
             this.rbtnN5.Name = "rbtnN5";
             this.rbtnN5.Size = new System.Drawing.Size(37, 17);
             this.rbtnN5.TabIndex = 10;
@@ -302,7 +303,7 @@
             // rbtnN1
             // 
             this.rbtnN1.AutoSize = true;
-            this.rbtnN1.Location = new System.Drawing.Point(678, 283);
+            this.rbtnN1.Location = new System.Drawing.Point(678, 312);
             this.rbtnN1.Name = "rbtnN1";
             this.rbtnN1.Size = new System.Drawing.Size(37, 17);
             this.rbtnN1.TabIndex = 11;
@@ -313,7 +314,7 @@
             // rbtnP10
             // 
             this.rbtnP10.AutoSize = true;
-            this.rbtnP10.Location = new System.Drawing.Point(592, 298);
+            this.rbtnP10.Location = new System.Drawing.Point(592, 327);
             this.rbtnP10.Name = "rbtnP10";
             this.rbtnP10.Size = new System.Drawing.Size(43, 17);
             this.rbtnP10.TabIndex = 12;
@@ -324,7 +325,7 @@
             // rbtnP5
             // 
             this.rbtnP5.AutoSize = true;
-            this.rbtnP5.Location = new System.Drawing.Point(638, 298);
+            this.rbtnP5.Location = new System.Drawing.Point(638, 327);
             this.rbtnP5.Name = "rbtnP5";
             this.rbtnP5.Size = new System.Drawing.Size(37, 17);
             this.rbtnP5.TabIndex = 13;
@@ -335,7 +336,7 @@
             // rbtnP1
             // 
             this.rbtnP1.AutoSize = true;
-            this.rbtnP1.Location = new System.Drawing.Point(678, 298);
+            this.rbtnP1.Location = new System.Drawing.Point(678, 327);
             this.rbtnP1.Name = "rbtnP1";
             this.rbtnP1.Size = new System.Drawing.Size(37, 17);
             this.rbtnP1.TabIndex = 14;
@@ -347,7 +348,7 @@
             // 
             this.rbtnManual.AutoSize = true;
             this.rbtnManual.Checked = true;
-            this.rbtnManual.Location = new System.Drawing.Point(592, 260);
+            this.rbtnManual.Location = new System.Drawing.Point(592, 289);
             this.rbtnManual.Name = "rbtnManual";
             this.rbtnManual.Size = new System.Drawing.Size(14, 13);
             this.rbtnManual.TabIndex = 60;
@@ -405,12 +406,24 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "(Double-click for combat-stats)";
             // 
+            // btnInitiative
+            // 
+            this.btnInitiative.Font = new System.Drawing.Font("Mistral", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInitiative.Location = new System.Drawing.Point(592, 236);
+            this.btnInitiative.Name = "btnInitiative";
+            this.btnInitiative.Size = new System.Drawing.Size(321, 28);
+            this.btnInitiative.TabIndex = 68;
+            this.btnInitiative.Text = "START INITIATIVE!";
+            this.btnInitiative.UseVisualStyleBackColor = true;
+            this.btnInitiative.Click += new System.EventHandler(this.btnInitiative_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(925, 532);
+            this.Controls.Add(this.btnInitiative);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTiles);
             this.Controls.Add(this.btnSearch);
@@ -495,6 +508,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnTiles;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnInitiative;
     }
 }
 
