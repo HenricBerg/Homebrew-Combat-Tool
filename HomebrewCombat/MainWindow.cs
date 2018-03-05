@@ -1304,8 +1304,10 @@ Legendary Actions:
 
         private void btnInitiative_Click(object sender, EventArgs e)
         {
-            InitiativeUI initUI = new InitiativeUI();
-            initUI.Show();
+            InitCheck initCheck = new InitCheck(monsterCombatants);
+            initCheck.Show();
         }
+
+       
     }
 }

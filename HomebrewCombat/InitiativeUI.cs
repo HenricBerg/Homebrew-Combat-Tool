@@ -17,26 +17,42 @@ namespace HomebrewCombat
         public List<Combatant> initiativeList = new List<Combatant>();
 
 
-        public InitiativeUI()
+        public InitiativeUI(List<Combatant> checkedList)
         {
-            InitializeComponent();
-        }
 
-        private void InitiativeUI_Load(object sender, EventArgs e)
-        {
-            foreach (var combatant in Program.mainForm.initiativeList)
+
+            InitializeComponent();
+
+            foreach (var combatant in checkedList)
             {
                 initiativeList.Add(combatant);
             }
 
+        }
 
-            initiativeList.Count();
+        private void InitiativeUI_Load(object sender, EventArgs e)
+        {
+            
+
+
+            
 
 
             if (initiativeList.Count > 0)
             {
                 lblCurrent.Text = initiativeList[0].name + ", ID:" + initiativeList[0].ID;
+                
                 combatantCount = initiativeList.Count;
+
+                if (initiativeList.Count > 1)
+                {
+                    lblNext.Text = initiativeList[1].name + ", ID:" + initiativeList[1].ID;
+                }
+                else
+                {
+                    lblNext.Text = "NO ONE";
+                }
+
             }
             else
             {
@@ -95,8 +111,8 @@ namespace HomebrewCombat
                 }
                 else
                 {
-                    lblCurrent.Text = "NO ONE!";
-                    lblNext.Text = "NO ONE!";
+                    lblCurrent.Text = "NO ONE";
+                    lblNext.Text = "NO ONE";
                 }
 
             }

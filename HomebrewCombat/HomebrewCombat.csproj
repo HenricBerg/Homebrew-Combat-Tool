@@ -55,6 +55,12 @@
     <Compile Include="CombatStatUI.Designer.cs">
       <DependentUpon>CombatStatUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="InitCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitCheck.Designer.cs">
+      <DependentUpon>InitCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitiativeUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Utility\Validator.cs" />
     <EmbeddedResource Include="CombatStatUI.resx">
       <DependentUpon>CombatStatUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitCheck.resx">
+      <DependentUpon>InitCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InitiativeUI.resx">
       <DependentUpon>InitiativeUI.cs</DependentUpon>
