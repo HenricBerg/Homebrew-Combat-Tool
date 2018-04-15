@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitiativeUI));
             this.label1 = new System.Windows.Forms.Label();
             this.lblCurrent = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNext = new System.Windows.Forms.Label();
+            this.tmrCombat = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +88,11 @@
             this.lblNext.TabIndex = 4;
             this.lblNext.Text = "label3";
             // 
+            // tmrCombat
+            // 
+            this.tmrCombat.Interval = 1000;
+            this.tmrCombat.Tick += new System.EventHandler(this.tmrCombat_Tick);
+            // 
             // InitiativeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,5 +123,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNext;
+        private System.Windows.Forms.Timer tmrCombat;
     }
 }

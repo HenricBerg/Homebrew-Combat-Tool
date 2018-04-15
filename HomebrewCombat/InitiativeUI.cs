@@ -15,6 +15,7 @@ namespace HomebrewCombat
         public int counter = 0;
         public int combatantCount = 0;
         public List<Combatant> initiativeList = new List<Combatant>();
+        public int timerSec = 0;
 
 
         public InitiativeUI(List<Combatant> checkedList)
@@ -65,7 +66,12 @@ namespace HomebrewCombat
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
+            timerSec = 0;
+            btnNext.ForeColor = Color.Black;
+            btnNext.Text = "NEXT!";
+            tmrCombat.Enabled = true;
+            tmrCombat.Stop();
+            tmrCombat.Start();
 
 
 
@@ -119,6 +125,37 @@ namespace HomebrewCombat
 
 
 
+        }
+
+        private void tmrCombat_Tick(object sender, EventArgs e)
+        {
+
+            timerSec++;
+            btnNext.Text = timerSec.ToString();
+
+            if (timerSec > 14)
+            {
+                if (timerSec < 30)
+                {
+                    btnNext.ForeColor = Color.Yellow;
+                }
+                else
+                {
+                    btnNext.ForeColor = Color.Red;
+                    
+                }
+
+                if (timerSec > 59)
+                {
+                    tmrCombat.Stop();
+                }
+
+            }
+            
+
+            
+
+           
         }
     }
 }

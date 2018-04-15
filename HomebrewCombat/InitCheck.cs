@@ -21,9 +21,50 @@ namespace HomebrewCombat
         {
             InitializeComponent();
 
+
+            Combatant highestInitCombatant = new Combatant();
+            this.fullList.Clear();
+            var compareList = new List<Combatant>();
+            int highestInit = -1000;
+            int index = 0;
+
+
+
             foreach (var combatant in fullList)
             {
-                this.fullList.Add(combatant);
+                compareList.Add(combatant);
+            }
+
+
+            while (compareList.Count > 0)
+            {
+                foreach (var combatant in compareList)
+                {
+                    if (int.Parse(combatant.initiative) > highestInit)
+                    {
+                        highestInitCombatant = combatant;
+                        highestInit = int.Parse(highestInitCombatant.initiative);
+                    }
+
+                }
+                highestInit = -1000;
+                this.fullList.Add(highestInitCombatant);
+                compareList.Remove(highestInitCombatant);
+                index++;
+
+            }
+
+
+
+
+
+            foreach (var combatant in this.fullList)
+            {
+
+
+
+
+                
 
               
                 lstInclude.Items.Add("ID#" + combatant.ID + ": " + combatant.name + ", HP: " + combatant.HP + "  -  Init: " + combatant.initiative);
