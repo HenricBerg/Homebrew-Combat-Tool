@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/HomebrewCombat/v16/Server/sqlite3/storage.ide-wal
+/.vs/HomebrewCombat/v16/Server/sqlite3/storage.ide-shm
+/.vs/HomebrewCombat/v16/Server/sqlite3/storage.ide
+/.vs/HomebrewCombat/v16/Server/sqlite3/db.lock
