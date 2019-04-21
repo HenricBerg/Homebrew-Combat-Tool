@@ -82,10 +82,17 @@
     <Compile Include="Models\Combatant.cs" />
     <Compile Include="Models\Condition.cs" />
     <Compile Include="Models\ImageSource.cs" />
+    <Compile Include="Models\Spell.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SpellTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellTool.Designer.cs">
+      <DependentUpon>SpellTool.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility\FileHandler.cs" />
     <Compile Include="MainWindow.cs">
@@ -141,6 +148,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellTool.resx">
+      <DependentUpon>SpellTool.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

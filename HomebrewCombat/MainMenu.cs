@@ -47,5 +47,95 @@ namespace HomebrewCombat
         {
             Program.mainForm.Reset();
         }
+
+        private void btnLoadSpells_Click(object sender, EventArgs e)
+        {
+            Program.mainForm.spellList = SpellFileHandler.GetSpellListFromSelectedFile();
+
+
+            List<Form> formList = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+            {
+
+                formList.Add(f);
+
+            }
+
+            foreach (Form f in formList)
+            {
+                if (f is SpellTool)
+                {
+                    SpellTool x = (SpellTool)f;
+                    x.RefreshSpells();
+                }
+
+
+            }
+
+            Dispose();
+
+        }
+
+        private void btnSaveSpell_Click(object sender, EventArgs e)
+        {
+            SpellFileHandler.SaveSpellListToFileAs(Program.mainForm.spellList);
+            Dispose();
+        }
+
+        private void btnSpellDownload_Click(object sender, EventArgs e)
+        {
+            Program.mainForm.spellList = SpellFileHandler.GetSpellListFromWeb();
+
+            List<Form> formList = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+            {
+
+                formList.Add(f);
+
+            }
+
+            foreach (Form f in formList)
+            {
+                if (f is SpellTool)
+                {
+                    SpellTool x = (SpellTool)f;
+                    x.RefreshSpells();
+                }
+
+
+            }
+
+            Dispose();
+        }
+
+        private void btnDuplicates_Click(object sender, EventArgs e)
+        {
+            List<Monster> newList = new List<Monster>();
+            
+            foreach (Monster monster in Program.mainForm.monsterList)
+            {
+                string testName = monster.name;
+
+                List<Monster> found = newList.Where(x => x.name == testName).ToList();
+
+                if (found.Count < 1)
+                {
+                    newList.Add(monster);
+                }
+                
+            }
+
+            Program.mainForm.monsterList.Clear();
+
+            foreach(Monster monster in newList)
+            {
+                Program.mainForm.monsterList.Add(monster);
+            }
+
+            Program.mainForm.RefreshMonsterList();
+
+        }
     }
 }

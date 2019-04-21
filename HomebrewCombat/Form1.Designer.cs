@@ -64,6 +64,7 @@
             this.btnTiles = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnInitiative = new System.Windows.Forms.Button();
+            this.btnSpells = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDBMenu
@@ -417,12 +418,24 @@
             this.btnInitiative.UseVisualStyleBackColor = true;
             this.btnInitiative.Click += new System.EventHandler(this.btnInitiative_Click);
             // 
+            // btnSpells
+            // 
+            this.btnSpells.Font = new System.Drawing.Font("Mistral", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSpells.Location = new System.Drawing.Point(592, 503);
+            this.btnSpells.Name = "btnSpells";
+            this.btnSpells.Size = new System.Drawing.Size(120, 23);
+            this.btnSpells.TabIndex = 69;
+            this.btnSpells.Text = "SPELLS!";
+            this.btnSpells.UseVisualStyleBackColor = true;
+            this.btnSpells.Click += new System.EventHandler(this.btnSpells_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(925, 532);
+            this.Controls.Add(this.btnSpells);
             this.Controls.Add(this.btnInitiative);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTiles);
@@ -509,6 +522,7 @@
         private System.Windows.Forms.Button btnTiles;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnInitiative;
+        private System.Windows.Forms.Button btnSpells;
     }
 }
 

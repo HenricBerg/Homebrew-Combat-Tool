@@ -147,7 +147,9 @@ namespace HomebrewCombat
 
                 if (timerSec > 59)
                 {
+                    btnNext.Text = "NEXT!";
                     tmrCombat.Stop();
+
                 }
 
             }

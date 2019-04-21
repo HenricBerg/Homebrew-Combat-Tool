@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMonster xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monster>
+    <name>Peaceful Human</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>10</AC>
+    <HP>3</HP>
+    <speed />
+    <STR />
+    <DEX />
+    <CON />
+    <INT />
+    <WIS />
+    <CHA />
+    <skill>BAB 0</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>15+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>0</initiative>
+    <traitList />
+    <actionList />
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Martial Human</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>10</AC>
+    <HP>4</HP>
+    <speed />
+    <STR />
+    <DEX />
+    <CON />
+    <INT />
+    <WIS />
+    <CHA />
+    <skill>BAB 1</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>15+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>0</initiative>
+    <traitList />
+    <actionList>
+      <Action>
+        <name>Weapon+0</name>
+        <text>DMG+0</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Veteran Fighter</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>14</AC>
+    <HP>7</HP>
+    <speed />
+    <STR />
+    <DEX />
+    <CON />
+    <INT />
+    <WIS />
+    <CHA />
+    <skill>BAB 2</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>14+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>1</initiative>
+    <traitList />
+    <actionList>
+      <Action>
+        <name>Weapon+1</name>
+        <text>DMG+1</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Elite Fighter</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>16</AC>
+    <HP>12</HP>
+    <speed />
+    <STR />
+    <DEX />
+    <CON />
+    <INT />
+    <WIS />
+    <CHA />
+    <skill>BAB 4</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>14+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>2</initiative>
+    <traitList />
+    <actionList>
+      <Action>
+        <name>Weapon+1</name>
+        <text>DMG+1</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Heroic Fighter</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>16</AC>
+    <HP>25</HP>
+    <speed />
+    <STR />
+    <DEX />
+    <CON />
+    <INT />
+    <WIS />
+    <CHA />
+    <skill>BAB 8</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>12+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>+3</initiative>
+    <traitList />
+    <actionList />
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>- X</name>
+    <size />
+    <type>Tyrux, Human</type>
+    <alignment />
+    <AC>14</AC>
+    <HP>17</HP>
+    <speed />
+    <STR>10</STR>
+    <DEX>14</DEX>
+    <CON>9</CON>
+    <INT>11</INT>
+    <WIS>11</WIS>
+    <CHA>10</CHA>
+    <skill>BAB: 2</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>P: 13, M: 13, E: 12</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>1</initiative>
+    <traitList>
+      <Trait>
+        <name>Gecko anchor</name>
+        <textList>
+          <string>Spider climb</string>
+        </textList>
+      </Trait>
+    </traitList>
+    <actionList>
+      <Action>
+        <name>Monoblade/Laser Pistol</name>
+        <text>1d6</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>- Aldéric Bonapart</name>
+    <size />
+    <type>Human</type>
+    <alignment />
+    <AC>20</AC>
+    <HP>20</HP>
+    <speed />
+    <STR>5</STR>
+    <DEX>9</DEX>
+    <CON>12</CON>
+    <INT>14</INT>
+    <WIS>11</WIS>
+    <CHA>14</CHA>
+    <skill>BAB 2</skill>
+    <passive />
+    <languages>ALL</languages>
+    <CR />
+    <immune />
+    <senses />
+    <save>P 13, M 12, E 12</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>0</initiative>
+    <traitList>
+      <Trait>
+        <name>Holoskin Emitters</name>
+        <textList>
+          <string>Disguise Self</string>
+        </textList>
+      </Trait>
+    </traitList>
+    <actionList>
+      <Action>
+        <name>Revolver</name>
+        <text>1d8</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>- Captain J</name>
+    <size />
+    <type>Human</type>
+    <alignment />
+    <AC>20</AC>
+    <HP>20</HP>
+    <speed />
+    <STR>14</STR>
+    <DEX>10</DEX>
+    <CON>14</CON>
+    <INT>13</INT>
+    <WIS>12</WIS>
+    <CHA>8</CHA>
+    <skill>BAB 4</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>P 11, M 12, E 11</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description />
+    <spells />
+    <slots />
+    <initiative>1</initiative>
+    <traitList />
+    <actionList>
+      <Action>
+        <name>Hydra Array</name>
+        <text>3d6</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Tyrone 'Gorilla' Digger</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>14</AC>
+    <HP>36</HP>
+    <speed />
+    <STR>18</STR>
+    <DEX>9</DEX>
+    <CON>15</CON>
+    <INT>3</INT>
+    <WIS>8</WIS>
+    <CHA>7</CHA>
+    <skill>BAB 8</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>12+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description>Gene-modified warrior created by the Oriatar in their attempt to make human infiltrator soldiers some hundred years ago. The facility got shut down, and later raided by pirates that discovered the birthing-pods where he was kept in stasis.
+
+Prone to bezerk fury, but obedient to a fault in a non-combat situation.</description>
+    <spells />
+    <slots />
+    <initiative>3</initiative>
+    <traitList />
+    <actionList>
+      <Action>
+        <name>Weapon+1</name>
+        <text>DMG+1</text>
+      </Action>
+    </actionList>
+    <legendaryList />
+    <reactionList />
+  </Monster>
+  <Monster>
+    <name>Jataki "Number One" Shikamaru</name>
+    <size />
+    <type />
+    <alignment />
+    <AC>17</AC>
+    <HP>20</HP>
+    <speed />
+    <STR>11</STR>
+    <DEX>16</DEX>
+    <CON>9</CON>
+    <INT>14</INT>
+    <WIS>10</WIS>
+    <CHA>11</CHA>
+    <skill>BAB 4</skill>
+    <passive />
+    <languages />
+    <CR />
+    <immune />
+    <senses />
+    <save>12+</save>
+    <resist />
+    <vulnerable />
+    <conditionImmune />
+    <description>Relief-Captain of the Einherjar. Currently the de-facto leader of the Asgard Sigma-expedition placed to guard the PSI-portal of the Vanaheimr Upsilon-sector with 20 men under her command.
+
+Formerly a Chaplain of the Sanyukta Human Union Navy's Special Operatives (SHUN-SO). Branded as a traitor and mutaneer, she has a sector-wide bounty of 100.000 credits back home.
+
+The rumors as to the reason are many.</description>
+    <spells />
+    <slots />
+    <initiative>+3</initiative>
+    <traitList />
+    <actionList />
+    <legendaryList />
+    <reactionList />
+  </Monster>
+</ArrayOfMonster>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using HomebrewCombat.Models;
 
 
 namespace HomebrewCombat
@@ -10,6 +11,7 @@ namespace HomebrewCombat
     public partial class MainWindow : Form
     {
         public List<Monster> monsterList = new List<Monster>();
+        public List<Spell> spellList = new List<Spell>();
         public static List<Combatant> monsterCombatants = new List<Combatant>();
         public List<Condition> defaultConditions = new List<Condition>();
         public List<Combatant> initiativeList = new List<Combatant>();
@@ -1308,6 +1310,10 @@ Legendary Actions:
             initCheck.Show();
         }
 
-       
+        private void btnSpells_Click(object sender, EventArgs e)
+        {
+            SpellTool spellTool = new SpellTool();
+            spellTool.Show();
+        }
     }
 }

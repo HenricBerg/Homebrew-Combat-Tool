@@ -12,6 +12,215 @@ using System.Linq;
 namespace HomebrewCombat
 {
 
+    public static class SpellFileHandler
+    {
+        public static List<Spell> GetSpellListFromSelectedFile()
+        {
+
+            var spellList = new List<Spell>();
+            try
+            {
+                var serializer = new XmlSerializer(typeof(List<Spell>));
+                using (OpenFileDialog dlg = new OpenFileDialog())
+                {
+                    dlg.Title = "Load XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "spells.xml";
+
+                    DialogResult result = dlg.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        if (File.Exists(dlg.FileName))
+                        {
+                            using (var stream = new StreamReader(dlg.FileName))
+                            {
+                                spellList = (List<Spell>)serializer.Deserialize(stream);
+
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+            catch
+            {
+                MessageBox.Show("WARNING! Load unsuccessful, try again.");
+            }
+
+
+            return spellList;
+        }
+
+        public static void SaveSpellListToFileAs(List<Spell> spellList)
+        {
+
+            try
+            {
+                var serializer = new XmlSerializer(typeof(List<Spell>));
+
+                using (SaveFileDialog dlg = new SaveFileDialog())
+                {
+                    dlg.Title = "Save XML";
+                    dlg.Filter = "XML files (*.xml) | *.xml;";
+                    dlg.FileName = "spells.xml";
+
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var stream = new StreamWriter(dlg.FileName))
+                        {
+                            serializer.Serialize(stream, spellList);
+
+
+                        }
+                    }
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("WARNING! Save unsuccessful, try again!");
+            }
+
+
+
+
+
+        }
+
+        public static List<Spell> GetSpellListFromWeb()
+        {
+            List<Spell> spellList = new List<Spell>();
+            try
+            {
+
+                var url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Spells/EE%20Spells.xml";
+
+                spellList = GetSpells(url);
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Spells/PHB%20Spells.xml";
+                spellList.AddRange(GetSpells(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Spells/SCAG%20Spells.xml";
+                spellList.AddRange(GetSpells(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Unearthed%20Arcana/UA%20Starter%20Spells";
+                spellList.AddRange(GetSpells(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Unearthed%20Arcana/Modern%20Spells.xml";
+                spellList.AddRange(GetSpells(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Unearthed%20Arcana/Demon%20Summoning.xml";
+                spellList.AddRange(GetSpells(url));
+                MessageBox.Show("The database has been downloaded.");
+            }
+            catch
+            {
+                MessageBox.Show("Download unsuccessful.");
+            }
+
+
+            return spellList;
+
+        }
+
+        public static List<Spell> GetSpells(string url)
+        {
+
+            var xml = "";
+
+            using (var client = new WebClient())
+            {
+                client.Encoding = Encoding.UTF8;
+                xml = client.DownloadString(url);
+
+            }
+
+            var document = new XmlDocument();
+            document.LoadXml(xml);
+            var spellList = new List<Spell>();
+
+
+            foreach (XmlNode spell in document.DocumentElement.SelectNodes("spell"))
+            {
+
+                var name = "N/A";
+                var level = "N/A";
+                var school = "N/A";
+                var time = "N/A";
+                var range = "N/A";
+                var components = "N/A";
+                var duration = "N/A";
+                var classes = "N/A";
+                var ritual = "NO";
+                List<string> textList = new List<string>();
+
+
+                try { name = spell.SelectSingleNode("name").InnerText; }
+                catch { }
+                try { level = spell.SelectSingleNode("level").InnerText; }
+                catch { }
+                try { school = spell.SelectSingleNode("school").InnerText; }
+                catch { }
+                try { time = spell.SelectSingleNode("time").InnerText; }
+                catch { }
+                try { range = spell.SelectSingleNode("range").InnerText; }
+                catch { }
+                try { components = spell.SelectSingleNode("components").InnerText; }
+                catch { }
+                try { duration = spell.SelectSingleNode("duration").InnerText; }
+                catch { }
+                try { classes = spell.SelectSingleNode("classes").InnerText; }
+                catch { }
+                try { ritual = spell.SelectSingleNode("ritual").InnerText; }
+                catch { }
+
+                try
+                {
+
+                    foreach (XmlNode text in spell.SelectNodes("text"))
+                    {
+
+                        textList.Add(text.InnerText);
+
+
+                    }
+
+
+
+
+
+
+
+                }
+                catch { }
+
+
+
+                spellList.Add(new Spell
+                {
+                    name = name,
+                    level = level,
+                    school = school,
+                    time = time,
+                    range = range,
+                    components = components,
+                    duration = duration,
+                    classes = classes,
+                    ritual = ritual,
+                    textList = textList
+
+
+
+                });
+            }
+
+
+
+
+            return spellList;
+        }
+
+    }
+
+
     public static class FileHandler
     {
 
@@ -46,8 +255,8 @@ namespace HomebrewCombat
             {
                 MessageBox.Show("WARNING! Save unsuccessful, try again!");
             }
-           
-           
+
+
 
 
 
@@ -83,7 +292,7 @@ namespace HomebrewCombat
             {
                 MessageBox.Show("WARNING! Save unsuccessful, try again!");
             }
-            
+
         }
 
         public static List<ImageSource> GetImageLayoutFromFile()
@@ -119,7 +328,7 @@ namespace HomebrewCombat
             {
                 MessageBox.Show("WARNING! Load unsuccessful, try again.");
             }
-            
+
 
 
             return imageList;
@@ -144,7 +353,7 @@ namespace HomebrewCombat
             List<Monster> monsterList = new List<Monster>();
             try
             {
-                
+
                 monsterList.AddRange(oldList);
 
                 using (OpenFileDialog dlg = new OpenFileDialog())
@@ -189,7 +398,7 @@ namespace HomebrewCombat
             {
                 MessageBox.Show("WARNING! Merge unsuccessful, try again.");
             }
-           
+
 
 
 
@@ -200,7 +409,7 @@ namespace HomebrewCombat
 
         public static List<Monster> GetMonsterListFromSelectedFile()
         {
-            
+
             var monsterList = new List<Monster>();
             try
             {
@@ -226,8 +435,8 @@ namespace HomebrewCombat
                     }
                 }
             }
-            
-            
+
+
             catch
             {
                 MessageBox.Show("WARNING! Load unsuccessful, try again.");
@@ -261,11 +470,33 @@ namespace HomebrewCombat
             List<Monster> monsterList = new List<Monster>();
             try
             {
-               
+
                 var url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Monster%20Manual%20Bestiary.xml";
 
                 monsterList = GetMonsterManual(url);
                 url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Curse%20of%20Strahd%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Hoard%20of%20the%20Dragon%20Queen%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Out%20of%20the%20Abyss.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Phandelver%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Player%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Princes%20of%20the%20Apocalypse%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Storm%20King's%20Thunder.xml";
+
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Tales%20From%20the%20Yawining%20Portal%20Bestiary.xml";
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Volo's%20Bestiary.xml";
+
+                monsterList.AddRange(GetMonsterManual(url));
+                url = "https://raw.githubusercontent.com/ceryliae/DnDAppFiles/master/Bestiary/Storm%20King's%20Thunder.xml";
+
                 monsterList.AddRange(GetMonsterManual(url));
                 MessageBox.Show("The database has been downloaded.");
             }
@@ -273,7 +504,7 @@ namespace HomebrewCombat
             {
                 MessageBox.Show("Download unsuccessful.");
             }
-            
+
 
             return monsterList;
 
