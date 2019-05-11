@@ -99,6 +99,7 @@
             // 
             // rtboxDetails
             // 
+            this.rtboxDetails.BackColor = System.Drawing.SystemColors.HotTrack;
             this.rtboxDetails.Location = new System.Drawing.Point(250, 25);
             this.rtboxDetails.Name = "rtboxDetails";
             this.rtboxDetails.Size = new System.Drawing.Size(336, 472);

@@ -16,3 +16,21 @@ C:\Users\henri\Source\Repos\Homebrew-Combat-Tool\HomebrewCombat\obj\Debug\GM-Too
 C:\Users\henri\Source\Repos\Homebrew-Combat-Tool\HomebrewCombat\obj\Debug\HomebrewCombat.InitiativeUI.resources
 C:\Users\henri\Source\Repos\Homebrew-Combat-Tool\HomebrewCombat\obj\Debug\HomebrewCombat.InitCheck.resources
 C:\Users\henri\source\repos\Homebrew-Combat-Tool\HomebrewCombat\obj\Debug\HomebrewCombat.SpellTool.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\GM-Tool.exe.config
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\GM-Tool.exe
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\GM-Tool.pdb
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csprojAssemblyReference.cache
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.CombatStatUI.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.InitCheck.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.InitiativeUI.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.MainMenu.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.MainWindow.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.ManualCombatant.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.ManualMonster.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.MapTileUI.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.Properties.Resources.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.SpellTool.resources
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csproj.GenerateResource.cache
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csproj.CoreCompileInputs.cache
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\GM-Tool.exe
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\GM-Tool.pdb
