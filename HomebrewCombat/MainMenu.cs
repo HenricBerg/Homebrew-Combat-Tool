@@ -23,12 +23,7 @@ namespace HomebrewCombat
             Dispose();
         }
 
-        private void btnDownload_Click(object sender, EventArgs e)
-        {
-            Program.mainForm.DownloadDatabase();
-            Dispose();
-        }
-
+    
         private void btnSave_Click(object sender, EventArgs e)
         {
             FileHandler.SaveMonsterListToFileAs(Program.mainForm.monsterList);
@@ -83,32 +78,7 @@ namespace HomebrewCombat
             Dispose();
         }
 
-        private void btnSpellDownload_Click(object sender, EventArgs e)
-        {
-            Program.mainForm.spellList = SpellFileHandler.GetSpellListFromWeb();
-
-            List<Form> formList = new List<Form>();
-
-            foreach (Form f in Application.OpenForms)
-            {
-
-                formList.Add(f);
-
-            }
-
-            foreach (Form f in formList)
-            {
-                if (f is SpellTool)
-                {
-                    SpellTool x = (SpellTool)f;
-                    x.RefreshSpells();
-                }
-
-
-            }
-
-            Dispose();
-        }
+        
 
         private void btnDuplicates_Click(object sender, EventArgs e)
         {

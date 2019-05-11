@@ -280,25 +280,7 @@ namespace HomebrewCombat
 
         }
 
-        public void DownloadDatabase()
-        {
-            MessageBox.Show("ALWAYS make sure have a backup of your current database before proceeding with this step.");
-            DialogResult dialogResult = MessageBox.Show("This action will take some time. Are you sure you want to continiue?", "Are you sure?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                monsterList = FileHandler.GetMonsterListFromWeb();
-
-
-               
-            }
-
-            lstMonsterList.Items.Clear();
-            rtboxDetails.Clear();
-            RefreshMonsterList();
-            txtModifyHP.Text = "0";
-
-
-        }
+        
 
         public void PopOutCombat()
         {
@@ -1167,14 +1149,6 @@ Legendary Actions:
 
         }
 
-        private void btnTiles_Click(object sender, EventArgs e)
-        {
-            
-                MapTileUI mapTileUI = new MapTileUI();
-                mapTileUI.Show();
-           
-        }
-
         public void Reset()
         {
             DialogResult dialogResult = MessageBox.Show("This will clear your currently loaded database. It will NOT delete any saved files. Proceed?", "Are you sure?", MessageBoxButtons.YesNo);
@@ -1315,5 +1289,7 @@ Legendary Actions:
             SpellTool spellTool = new SpellTool();
             spellTool.Show();
         }
+
+       
     }
 }

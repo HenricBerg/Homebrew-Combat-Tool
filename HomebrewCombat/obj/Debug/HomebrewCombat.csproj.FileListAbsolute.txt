@@ -27,10 +27,14 @@ H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewComb
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.MainWindow.resources
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.ManualCombatant.resources
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.ManualMonster.resources
-H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.MapTileUI.resources
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.Properties.Resources.resources
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.SpellTool.resources
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csproj.GenerateResource.cache
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csproj.CoreCompileInputs.cache
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\GM-Tool.exe
 H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\GM-Tool.pdb
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\EPPlus.dll
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\System.IO.FileSystem.Primitives.dll
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\System.IO.Packaging.dll
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\bin\Debug\EPPlus.xml
+H:\Projekt\D&D\HomebrewCombat - Pathfinder\HomebrewCombat\obj\Debug\HomebrewCombat.csproj.CopyComplete

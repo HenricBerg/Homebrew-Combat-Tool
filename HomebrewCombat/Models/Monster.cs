@@ -9,48 +9,77 @@ namespace HomebrewCombat
     public class Monster
     {
 
-        public string name { get; set; }
-        public string size { get; set; }
-        public string type { get; set; }
-        public string alignment { get; set; }
-        public string AC { get; set; }
-        public string HP { get; set; }
-        public string speed { get; set; }
-        public string STR { get; set; }
-        public string DEX { get; set; }
-        public string CON { get; set; }
-        public string INT { get; set; }
-        public string WIS { get; set; }
-        public string CHA { get; set; }
-        public string skill { get; set; }
-        public string passive { get; set; }
-        public string languages { get; set; }
-        public string CR { get; set; }
-        public string immune { get; set; }
-        public string senses { get; set; }
-        public string save { get; set; }
-        public string resist { get; set; }
-        public string vulnerable { get; set; }
-        public string conditionImmune { get; set; }
-        public string description { get; set; }
-        public string spells { get; set; }
-        public string slots { get; set; }
-        public string initiative { get; set; }
-
-
-        
-        public List<Trait> traitList { get; set; }
-        public List<Action> actionList { get; set; }
-        public List<Legendary> legendaryList { get; set; }
-        public List<Reaction> reactionList { get; set; }
-
-        public Monster()
-        {
-            traitList = new List<Trait>();
-            actionList = new List<Action>();
-            legendaryList = new List<Legendary>();
-            reactionList = new List<Reaction>();
-        }
+        public string Name { get; set; } = "N/A";
+        public string CR { get; set; } = "N/A";
+        public string XP { get; set; } = "N/A";
+        public string Race { get; set; } = "N/A";
+        public string Class1 { get; set; } = "N/A";
+        public string Class1Lvl { get; set; } = "N/A";
+        public string Class2 { get; set; } = "N/A";
+        public string Class2Lvl { get; set; } = "N/A";
+        public string Alignment { get; set; } = "N/A";
+        public string Size { get; set; } = "N/A";
+        public string Type { get; set; } = "N/A";
+        public string Subtype1 { get; set; } = "N/A";
+        public string Subtype2 { get; set; } = "N/A";
+        public string Subtype3 { get; set; } = "N/A";
+        public string Subtype4 { get; set; } = "N/A";
+        public string Subtype5 { get; set; } = "N/A";
+        public string Subtype6 { get; set; } = "N/A";
+        public string AC { get; set; } = "N/A";
+        public string ACTouch { get; set; } = "N/A";
+        public string ACFlatFooted { get; set; } = "N/A";
+        public string HP { get; set; } = "N/A";
+        public string HD { get; set; } = "N/A";
+        public string Fortitude { get; set; } = "N/A";
+        public string Reflex { get; set; } = "N/A";
+        public string Will { get; set; } = "N/A";
+        public string Melee { get; set; } = "N/A";
+        public string Ranged { get; set; } = "N/A";
+        public string Space { get; set; } = "N/A";
+        public string Reach { get; set; } = "N/A";
+        public string STR { get; set; } = "N/A";
+        public string DEX { get; set; } = "N/A";
+        public string CON { get; set; } = "N/A";
+        public string INT { get; set; } = "N/A";
+        public string WIS { get; set; } = "N/A";
+        public string CHA { get; set; } = "N/A";
+        public string Feats { get; set; } = "N/A";
+        public string Skills { get; set; } = "N/A";
+        public string RacialMods { get; set; } = "N/A";
+        public string Languages { get; set; } = "N/A";
+        public string SQ { get; set; } = "N/A";
+        public string Environment { get; set; } = "N/A";
+        public string Organization { get; set; } = "N/A";
+        public string Treasure { get; set; } = "N/A";
+        public string Group { get; set; } = "N/A";
+        public string Gear { get; set; } = "N/A";
+        public string OtherGear { get; set; } = "N/A";
+        public string CharacterFlag { get; set; } = "N/A";
+        public string CompanionFlag { get; set; } = "N/A";
+        public string Speed { get; set; } = "N/A";
+        public string BaseSpeed { get; set; } = "N/A";
+        public string FlySpeed { get; set; } = "N/A";
+        public string FlyManeuverability { get; set; } = "N/A";
+        public string ClimbSpeed { get; set; } = "N/A";
+        public string SwimSpeed { get; set; } = "N/A";
+        public string BurrowSpeed { get; set; } = "N/A";
+        public string SpeedSpecial { get; set; } = "N/A";
+        public string SpeedLand { get; set; } = "N/A";
+        public string Fly { get; set; } = "N/A";
+        public string Climb { get; set; } = "N/A";
+        public string Burrow { get; set; } = "N/A";
+        public string Swim { get; set; } = "N/A";
+        public string VariantParent { get; set; } = "N/A";
+        public string ClassArchetypes { get; set; } = "N/A";
+        public string CompanionFamiliarLink { get; set; } = "N/A";
+        public string AlternateNameForm { get; set; } = "N/A";
+        public string ID { get; set; } = "N/A";
+        public string UniqueMonster { get; set; } = "N/A";
+        public string MR { get; set; } = "N/A";
+        public string Mythic { get; set; } = "N/A";
+        public string MT { get; set; } = "N/A";
+        public string Source { get; set; } = "N/A";
 
     }
 }

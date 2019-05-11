@@ -61,7 +61,6 @@
             this.btnDeleteMonster = new System.Windows.Forms.Button();
             this.txtMonsterSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnTiles = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnInitiative = new System.Windows.Forms.Button();
             this.btnSpells = new System.Windows.Forms.Button();
@@ -71,7 +70,7 @@
             // 
             this.btnDBMenu.Location = new System.Drawing.Point(250, 503);
             this.btnDBMenu.Name = "btnDBMenu";
-            this.btnDBMenu.Size = new System.Drawing.Size(169, 23);
+            this.btnDBMenu.Size = new System.Drawing.Size(336, 23);
             this.btnDBMenu.TabIndex = 21;
             this.btnDBMenu.Text = "Database Functions";
             this.btnDBMenu.UseVisualStyleBackColor = true;
@@ -99,7 +98,7 @@
             // 
             // rtboxDetails
             // 
-            this.rtboxDetails.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.rtboxDetails.BackColor = System.Drawing.SystemColors.Window;
             this.rtboxDetails.Location = new System.Drawing.Point(250, 25);
             this.rtboxDetails.Name = "rtboxDetails";
             this.rtboxDetails.Size = new System.Drawing.Size(336, 472);
@@ -389,16 +388,6 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnTiles
-            // 
-            this.btnTiles.Location = new System.Drawing.Point(425, 503);
-            this.btnTiles.Name = "btnTiles";
-            this.btnTiles.Size = new System.Drawing.Size(161, 23);
-            this.btnTiles.TabIndex = 66;
-            this.btnTiles.Text = "Dungeon Tiles";
-            this.btnTiles.UseVisualStyleBackColor = true;
-            this.btnTiles.Click += new System.EventHandler(this.btnTiles_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -439,7 +428,6 @@
             this.Controls.Add(this.btnSpells);
             this.Controls.Add(this.btnInitiative);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnTiles);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtMonsterSearch);
             this.Controls.Add(this.btnDeleteMonster);
@@ -478,7 +466,7 @@
             this.Name = "MainWindow";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Henric\'s D&D 5th Edition GM-Tool";
+            this.Text = "HomeBrew Pathfinder GM-Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
@@ -520,7 +508,6 @@
         private System.Windows.Forms.Button btnDeleteMonster;
         private System.Windows.Forms.TextBox txtMonsterSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnTiles;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnInitiative;
         private System.Windows.Forms.Button btnSpells;

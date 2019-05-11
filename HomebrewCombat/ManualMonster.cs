@@ -27,10 +27,10 @@ namespace HomebrewCombat
             mainWindow = mainForm;
             ControlBox = false;
             mainMonster = monster;
-            traitList = monster.traitList;
-            actionList = monster.actionList;
-            legendaryList = monster.legendaryList;
-            reactionList = monster.reactionList;
+            //traitList = monster.traitList;
+            //actionList = monster.actionList;
+            //legendaryList = monster.legendaryList;
+            //reactionList = monster.reactionList;
             this.FillFields();
 
 
@@ -41,84 +41,84 @@ namespace HomebrewCombat
 
         public void FillFields()
         {
-            txtName.Text = mainMonster.name;
-            txtSize.Text = mainMonster.size;
-            txtType.Text = mainMonster.type;
-            txtAlignment.Text = mainMonster.alignment;
-            txtAC.Text = mainMonster.AC;
-            txtHP.Text = mainMonster.HP;
-            txtSpeed.Text = mainMonster.speed;
-            txtSTR.Text = mainMonster.STR;
-            txtDEX.Text = mainMonster.DEX;
-            txtCON.Text = mainMonster.CON;
-            txtINT.Text = mainMonster.INT;
-            txtWIS.Text = mainMonster.WIS;
-            txtCHA.Text = mainMonster.CHA;
-            txtSkill.Text = mainMonster.skill;
-            txtPassive.Text = mainMonster.passive;
-            txtLanguages.Text = mainMonster.languages;
-            txtCR.Text = mainMonster.CR;
-            txtImmune.Text = mainMonster.immune;
-            txtSenses.Text = mainMonster.senses;
-            txtSave.Text = mainMonster.save;
-            txtResist.Text = mainMonster.resist;
-            txtVulnerable.Text = mainMonster.vulnerable;
-            txtConditionImmune.Text = mainMonster.conditionImmune;
-            rtboxDescription.Text = mainMonster.description;
-            txtSpells.Text = mainMonster.spells;
-            txtSlots.Text = mainMonster.slots;
-            txtInitiative.Text = mainMonster.initiative;
+            //txtName.Text = mainMonster.name;
+            //txtSize.Text = mainMonster.size;
+            //txtType.Text = mainMonster.type;
+            //txtAlignment.Text = mainMonster.alignment;
+            //txtAC.Text = mainMonster.AC;
+            //txtHP.Text = mainMonster.HP;
+            //txtSpeed.Text = mainMonster.speed;
+            //txtSTR.Text = mainMonster.STR;
+            //txtDEX.Text = mainMonster.DEX;
+            //txtCON.Text = mainMonster.CON;
+            //txtINT.Text = mainMonster.INT;
+            //txtWIS.Text = mainMonster.WIS;
+            //txtCHA.Text = mainMonster.CHA;
+            //txtSkill.Text = mainMonster.skill;
+            //txtPassive.Text = mainMonster.passive;
+            //txtLanguages.Text = mainMonster.languages;
+            //txtCR.Text = mainMonster.CR;
+            //txtImmune.Text = mainMonster.immune;
+            //txtSenses.Text = mainMonster.senses;
+            //txtSave.Text = mainMonster.save;
+            //txtResist.Text = mainMonster.resist;
+            //txtVulnerable.Text = mainMonster.vulnerable;
+            //txtConditionImmune.Text = mainMonster.conditionImmune;
+            //rtboxDescription.Text = mainMonster.description;
+            //txtSpells.Text = mainMonster.spells;
+            //txtSlots.Text = mainMonster.slots;
+            //txtInitiative.Text = mainMonster.initiative;
 
-            try
-            {
-                foreach (var trait in mainMonster.traitList)
-                {
-                    lstTrait.Items.Add(trait.name);
-                }
-            }
-            catch
-            {
+            //try
+            //{
+            //    foreach (var trait in mainMonster.traitList)
+            //    {
+            //        lstTrait.Items.Add(trait.name);
+            //    }
+            //}
+            //catch
+            //{
 
-            }
+            //}
             
-            try
-            {
-                foreach (var action in mainMonster.actionList)
-                {
-                    lstAction.Items.Add(action.name);
-                }
-            }
-            catch
-            {
+            //try
+            //{
+            //    foreach (var action in mainMonster.actionList)
+            //    {
+            //        lstAction.Items.Add(action.name);
+            //    }
+            //}
+            //catch
+            //{
 
-            }
-            
-
-            try
-            {
-                foreach (var legendary in mainMonster.legendaryList)
-                {
-                    lstLegendary.Items.Add(legendary.name);
-                }
-            }
-            catch
-            {
-
-            }
+            //}
             
 
-            try
-            {
-                foreach (var reaction in mainMonster.reactionList)
-                {
-                    lstReaction.Items.Add(reaction.name);
-                }
+            //try
+            //{
+            //    foreach (var legendary in mainMonster.legendaryList)
+            //    {
+            //        lstLegendary.Items.Add(legendary.name);
+            //    }
+            //}
+            //catch
+            //{
 
-            }
-            catch
-            {
+            //}
+            
 
-            }
+            //try
+            //{
+            //    foreach (var reaction in mainMonster.reactionList)
+            //    {
+            //        lstReaction.Items.Add(reaction.name);
+            //    }
+
+            //}
+            //catch
+            //{
+
+            //}
             
 
 
@@ -128,38 +128,38 @@ namespace HomebrewCombat
         public Monster TextToMonster()
         {
             Monster monster = new Monster();
-            monster.name = "N/A";
-            monster.size = "N/A";
-            monster.type = "N/A";
-            monster.alignment = "N/A";
-            monster.AC = "N/A";
-            monster.HP = "N/A";
-            monster.speed = "N/A";
-            monster.STR = "N/A";
-            monster.DEX = "N/A";
-            monster.CON = "N/A";
-            monster.INT = "N/A";
-            monster.WIS = "N/A";
-            monster.CHA = "N/A";
-            monster.skill = "N/A";
-            monster.passive = "N/A";
-            monster.languages = "N/A";
-            monster.CR = "N/A";
-            monster.immune = "N/A";
-            monster.senses = "N/A";
-            monster.save = "N/A";
-            monster.resist = "N/A";
-            monster.vulnerable = "N/A";
-            monster.conditionImmune = "N/A";
-            monster.description = "N/A";
-            monster.spells = "N/A";
-            monster.slots = "N/A";
-            monster.initiative = "N/A";
+            //monster.name = "N/A";
+            //monster.size = "N/A";
+            //monster.type = "N/A";
+            //monster.alignment = "N/A";
+            //monster.AC = "N/A";
+            //monster.HP = "N/A";
+            //monster.speed = "N/A";
+            //monster.STR = "N/A";
+            //monster.DEX = "N/A";
+            //monster.CON = "N/A";
+            //monster.INT = "N/A";
+            //monster.WIS = "N/A";
+            //monster.CHA = "N/A";
+            //monster.skill = "N/A";
+            //monster.passive = "N/A";
+            //monster.languages = "N/A";
+            //monster.CR = "N/A";
+            //monster.immune = "N/A";
+            //monster.senses = "N/A";
+            //monster.save = "N/A";
+            //monster.resist = "N/A";
+            //monster.vulnerable = "N/A";
+            //monster.conditionImmune = "N/A";
+            //monster.description = "N/A";
+            //monster.spells = "N/A";
+            //monster.slots = "N/A";
+            //monster.initiative = "N/A";
             
-            monster.traitList = traitList;
-            monster.actionList = actionList;
-            monster.legendaryList = legendaryList;
-            monster.reactionList = reactionList;
+            //monster.traitList = traitList;
+            //monster.actionList = actionList;
+            //monster.legendaryList = legendaryList;
+            //monster.reactionList = reactionList;
 
 
 
@@ -167,38 +167,38 @@ namespace HomebrewCombat
 
 
 
-
-            
 
             
 
-            monster.name = txtName.Text;
-            monster.size = txtSize.Text;
-            monster.type = txtType.Text;
-            monster.alignment = txtAlignment.Text;
-            monster.AC = txtAC.Text;
-            monster.HP = txtHP.Text;
-            monster.speed = txtSpeed.Text;
-            monster.STR = txtSTR.Text;
-            monster.DEX = txtDEX.Text;
-            monster.CON = txtCON.Text;
-            monster.INT = txtINT.Text;
-            monster.WIS = txtWIS.Text;
-            monster.CHA = txtCHA.Text;
-            monster.skill = txtSkill.Text;
-            monster.passive = txtPassive.Text;
-            monster.languages = txtLanguages.Text;
-            monster.CR = txtCR.Text;
-            monster.immune = txtImmune.Text;
-            monster.senses = txtSenses.Text;
-            monster.save = txtSave.Text;
-            monster.resist = txtResist.Text;
-            monster.vulnerable = txtVulnerable.Text;
-            monster.conditionImmune = txtConditionImmune.Text;
-            monster.description = rtboxDescription.Text;
-            monster.spells = txtSpells.Text;
-            monster.slots = txtSlots.Text;
-            monster.initiative = txtInitiative.Text;
+            
+
+            //monster.name = txtName.Text;
+            //monster.size = txtSize.Text;
+            //monster.type = txtType.Text;
+            //monster.alignment = txtAlignment.Text;
+            //monster.AC = txtAC.Text;
+            //monster.HP = txtHP.Text;
+            //monster.speed = txtSpeed.Text;
+            //monster.STR = txtSTR.Text;
+            //monster.DEX = txtDEX.Text;
+            //monster.CON = txtCON.Text;
+            //monster.INT = txtINT.Text;
+            //monster.WIS = txtWIS.Text;
+            //monster.CHA = txtCHA.Text;
+            //monster.skill = txtSkill.Text;
+            //monster.passive = txtPassive.Text;
+            //monster.languages = txtLanguages.Text;
+            //monster.CR = txtCR.Text;
+            //monster.immune = txtImmune.Text;
+            //monster.senses = txtSenses.Text;
+            //monster.save = txtSave.Text;
+            //monster.resist = txtResist.Text;
+            //monster.vulnerable = txtVulnerable.Text;
+            //monster.conditionImmune = txtConditionImmune.Text;
+            //monster.description = rtboxDescription.Text;
+            //monster.spells = txtSpells.Text;
+            //monster.slots = txtSlots.Text;
+            //monster.initiative = txtInitiative.Text;
 
             return monster;
             
@@ -212,59 +212,55 @@ namespace HomebrewCombat
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Monster monster = new Monster();
+            //Monster monster = new Monster();
 
-            if (String.IsNullOrEmpty(txtName.Text))
-            {
-                MessageBox.Show("A name is required.");
-            }
-            else
-            {
+            //if (String.IsNullOrEmpty(txtName.Text))
+            //{
+            //    MessageBox.Show("A name is required.");
+            //}
+            //else
+            //{
                 
 
 
-                var existing = mainWindow.monsterList.FirstOrDefault(x => x.name == txtName.Text);
+            //    var existing = mainWindow.monsterList.FirstOrDefault(x => x.name == txtName.Text);
 
-                if (existing == null)
-                {
+            //    if (existing == null)
+            //    {
 
-                    monster = TextToMonster();
-                    mainWindow.monsterList.Add(monster);
+            //        monster = TextToMonster();
+            //        mainWindow.monsterList.Add(monster);
                     
                     
-                    mainWindow.RefreshMonsterList();
+            //        mainWindow.RefreshMonsterList();
                     
-                    this.Close();
-                }
-                else
-                {
+            //        this.Close();
+            //    }
+            //    else
+            //    {
 
 
-                    DialogResult dialogResult = MessageBox.Show("That name already exists. Are you sure you want to overwrite that monster?", "Are you sure?", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
+            //        DialogResult dialogResult = MessageBox.Show("That name already exists. Are you sure you want to overwrite that monster?", "Are you sure?", MessageBoxButtons.YesNo);
+            //        if (dialogResult == DialogResult.Yes)
+            //        {
 
 
 
-                        int index = mainWindow.monsterList.IndexOf(existing);
-                        monster = TextToMonster();
-                        mainWindow.monsterList[index] = monster;
+            //            int index = mainWindow.monsterList.IndexOf(existing);
+            //            monster = TextToMonster();
+            //            mainWindow.monsterList[index] = monster;
                         
-                        mainWindow.RefreshMonsterList();
+            //            mainWindow.RefreshMonsterList();
                         
                        
-                        this.Close();
+            //            this.Close();
 
-                    }
+            //        }
 
 
                         
-                }
-            }
-
-
-
-            
+            //    }
+            //}
 
 
         }
