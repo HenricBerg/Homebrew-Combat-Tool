@@ -14,10 +14,9 @@ namespace HomebrewCombat
     {
         MainWindow mainWindow;
         Monster mainMonster;
-        List<Trait> traitList;
+
         List<Action> actionList;
-        List<Legendary> legendaryList;
-        List<Reaction> reactionList;
+
 
 
         public ManualMonster(MainWindow mainForm, Monster monster)
@@ -273,35 +272,35 @@ namespace HomebrewCombat
 
         private void btnAddTrait_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtTName.Text))
-            {
-                MessageBox.Show("The trait needs a name.");
-            }
-            else
-            {
+            //if (String.IsNullOrEmpty(txtTName.Text))
+            //{
+            //    MessageBox.Show("The trait needs a name.");
+            //}
+            //else
+            //{
 
-                Trait exists = traitList.FirstOrDefault(x => x.name == txtTName.Text);
+            //    Trait exists = traitList.FirstOrDefault(x => x.name == txtTName.Text);
 
-                if (exists == null)
-                {
-                    Trait trait = new Trait();
-                    List<string> textList = new List<string>();
-                    trait.name = txtTName.Text;
+            //    if (exists == null)
+            //    {
+            //        Trait trait = new Trait();
+            //        List<string> textList = new List<string>();
+            //        trait.name = txtTName.Text;
 
-                    textList.Add(txtTText.Text);
-                    trait.textList = textList;
-                    traitList.Add(trait);
-                    lstTrait.Items.Add(trait.name);
-                    txtTName.Text = "";
-                    txtTText.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("A trait with that name already exists.");
-                }
+            //        textList.Add(txtTText.Text);
+            //        trait.textList = textList;
+            //        traitList.Add(trait);
+            //        lstTrait.Items.Add(trait.name);
+            //        txtTName.Text = "";
+            //        txtTText.Text = "";
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("A trait with that name already exists.");
+            //    }
 
                 
-            }
+            //}
 
             
         }
@@ -309,10 +308,9 @@ namespace HomebrewCombat
         private void btnClear_Click(object sender, EventArgs e)
         {
             mainMonster = new Monster();
-            traitList = new List<Trait>();
+           
             actionList = new List<Action>();
-            legendaryList = new List<Legendary>();
-            reactionList = new List<Reaction>();
+          
             rtboxDescription.Text = "";
 
 
@@ -336,26 +334,26 @@ namespace HomebrewCombat
 
         private void lstTrait_DoubleClick(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Remove trait: " + lstTrait.SelectedItem.ToString() +  " ?", "Are you sure?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                try
-                {
+            //DialogResult dialogResult = MessageBox.Show("Remove trait: " + lstTrait.SelectedItem.ToString() +  " ?", "Are you sure?", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    try
+            //    {
 
 
-                    Trait trait = traitList.First(x => x.name == lstTrait.SelectedItem.ToString());
+            //        Trait trait = traitList.First(x => x.name == lstTrait.SelectedItem.ToString());
 
-                    traitList.Remove(trait);
+            //        traitList.Remove(trait);
 
 
-                    lstTrait.Items.Remove(lstTrait.SelectedItem);
-                }
-                catch
-                {
+            //        lstTrait.Items.Remove(lstTrait.SelectedItem);
+            //    }
+            //    catch
+            //    {
 
-                }
+            //    }
 
-            }
+            //}
 
             
         }
@@ -417,114 +415,114 @@ namespace HomebrewCombat
 
         private void btnAddLegendary_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtLName.Text))
-            {
-                MessageBox.Show("The legendary needs a name.");
-            }
-            else
-            {
+            //if (String.IsNullOrEmpty(txtLName.Text))
+            //{
+            //    MessageBox.Show("The legendary needs a name.");
+            //}
+            //else
+            //{
 
-                Legendary exists = legendaryList.FirstOrDefault(x => x.name == txtLName.Text);
+            //    Legendary exists = legendaryList.FirstOrDefault(x => x.name == txtLName.Text);
 
-                if (exists == null)
-                {
-                    Legendary legendary = new Legendary();
+            //    if (exists == null)
+            //    {
+            //        Legendary legendary = new Legendary();
 
-                    legendary.name = txtLName.Text;
-                    legendary.text = txtLText.Text;
-                    legendaryList.Add(legendary);
-                    lstLegendary.Items.Add(legendary.name);
-                    txtLName.Text = "";
-                    txtLText.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("A legendary action with that name already exists.");
-                }
+            //        legendary.name = txtLName.Text;
+            //        legendary.text = txtLText.Text;
+            //        legendaryList.Add(legendary);
+            //        lstLegendary.Items.Add(legendary.name);
+            //        txtLName.Text = "";
+            //        txtLText.Text = "";
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("A legendary action with that name already exists.");
+            //    }
 
 
-            }
+            //}
         }
 
         private void btnAddReaction_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtRName.Text))
-            {
-                MessageBox.Show("The reaction needs a name.");
-            }
-            else
-            {
+            //if (String.IsNullOrEmpty(txtRName.Text))
+            //{
+            //    MessageBox.Show("The reaction needs a name.");
+            //}
+            //else
+            //{
                 
-                    Reaction exists = reactionList.FirstOrDefault(x => x.name == txtRName.Text);
+            //        Reaction exists = reactionList.FirstOrDefault(x => x.name == txtRName.Text);
                 
                 
 
-                if (exists == null)
-                {
-                    Reaction reaction = new Reaction();
+            //    if (exists == null)
+            //    {
+            //        Reaction reaction = new Reaction();
 
-                    reaction.name = txtRName.Text;
-                    reaction.text = txtRText.Text;
-                    reactionList.Add(reaction);
-                    lstReaction.Items.Add(reaction.name);
-                    txtRName.Text = "";
-                    txtRText.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("A reaction with that name already exists.");
-                }
+            //        reaction.name = txtRName.Text;
+            //        reaction.text = txtRText.Text;
+            //        reactionList.Add(reaction);
+            //        lstReaction.Items.Add(reaction.name);
+            //        txtRName.Text = "";
+            //        txtRText.Text = "";
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("A reaction with that name already exists.");
+            //    }
 
 
-            }
+            //}
         }
 
         private void lstLegendary_DoubleClick(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Remove legendary action: " + lstLegendary.SelectedItem.ToString() + " ?", "Are you sure?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                try
-                {
+            //DialogResult dialogResult = MessageBox.Show("Remove legendary action: " + lstLegendary.SelectedItem.ToString() + " ?", "Are you sure?", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    try
+            //    {
 
 
-                    Legendary legendary = legendaryList.First(x => x.name == lstLegendary.SelectedItem.ToString());
+            //        Legendary legendary = legendaryList.First(x => x.name == lstLegendary.SelectedItem.ToString());
 
-                    legendaryList.Remove(legendary);
+            //        legendaryList.Remove(legendary);
 
 
-                    lstLegendary.Items.Remove(lstLegendary.SelectedItem);
-                }
-                catch
-                {
+            //        lstLegendary.Items.Remove(lstLegendary.SelectedItem);
+            //    }
+            //    catch
+            //    {
 
-                }
+            //    }
 
-            }
+            //}
         }
 
         private void lstReaction_DoubleClick(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Remove reaction: " + lstReaction.SelectedItem.ToString() + " ?", "Are you sure?", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                try
-                {
+            //DialogResult dialogResult = MessageBox.Show("Remove reaction: " + lstReaction.SelectedItem.ToString() + " ?", "Are you sure?", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    try
+            //    {
 
 
-                    Reaction reaction = reactionList.First(x => x.name == lstReaction.SelectedItem.ToString());
+            //        Reaction reaction = reactionList.First(x => x.name == lstReaction.SelectedItem.ToString());
 
-                    reactionList.Remove(reaction);
+            //        reactionList.Remove(reaction);
 
 
-                    lstReaction.Items.Remove(lstReaction.SelectedItem);
-                }
-                catch
-                {
+            //        lstReaction.Items.Remove(lstReaction.SelectedItem);
+            //    }
+            //    catch
+            //    {
 
-                }
+            //    }
 
-            }
+            //}
         }
     }
 }

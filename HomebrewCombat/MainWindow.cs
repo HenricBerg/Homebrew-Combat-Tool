@@ -74,196 +74,13 @@ namespace HomebrewCombat
             Condition condition = new Condition();
             List<string> conditionDescription = new List<string>();
 
-            condition.name = "Blinded";
+            condition.name = "ADD CONDITIONS!!!";
             conditionDescription.Add("A blinded creature can’t see and automatically fails any ability check that requires sight.");
             conditionDescription.Add("Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.");
             condition.descriptionList = conditionDescription;
             defaultConditions.Add(condition);
 
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Charmed";
-            conditionDescription.Add("A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects.");
-            conditionDescription.Add("The charmer has advantage on any ability check to interact socially with the creature.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Deafened";
-            conditionDescription.Add("A deafened creature can’t hear and automatically fails any ability check that requires hearing.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Frightened";
-            conditionDescription.Add("A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight.");
-            conditionDescription.Add("The creature can’t willingly move closer to the source of its fear.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Grappled";
-            conditionDescription.Add("A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.");
-            conditionDescription.Add("The condition ends if the Grappler is incapacitated (see the condition).");
-            conditionDescription.Add("The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Incapacitated";
-            conditionDescription.Add("An incapacitated creature can’t take actions or reactions.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Invisible";
-            conditionDescription.Add("An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves.");
-            conditionDescription.Add("Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Paralyzed";
-            conditionDescription.Add("A paralyzed creature is incapacitated (see the condition) and can’t move or speak.");
-            conditionDescription.Add("The creature automatically fails Strength and Dexterity saving throws.");
-            conditionDescription.Add("Attack rolls against the creature have advantage.");
-            conditionDescription.Add("Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Petrified";
-            conditionDescription.Add("A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.");
-            conditionDescription.Add("The creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings.");
-            conditionDescription.Add("Attack rolls against the creature have advantage.");
-            conditionDescription.Add("The creature automatically fails Strength and Dexterity saving throws.");
-            conditionDescription.Add("The creature has Resistance to all damage.");
-            conditionDescription.Add("The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Poisoned";
-            conditionDescription.Add("A poisoned creature has disadvantage on Attack rolls and Ability Checks.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Prone";
-            conditionDescription.Add("A prone creature’s only Movement option is to crawl, unless it stands up and thereby ends the condition.");
-            conditionDescription.Add("The creature has disadvantage on Attack rolls.");
-            conditionDescription.Add("An Attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the Attack roll has disadvantage.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Restrained";
-            conditionDescription.Add("A restrained creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.");
-            conditionDescription.Add("Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.");
-            conditionDescription.Add("Attack rolls against the creature have advantage.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Stunned";
-            conditionDescription.Add("A stunned creature is incapacitated (see the condition), can’t move, and can speak only falteringly.");
-            conditionDescription.Add("The creature automatically fails Strength and Dexterity saving throws.");
-            conditionDescription.Add("The creature has disadvantage on Dexterity saving throws.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Unconscious";
-            conditionDescription.Add("An unconscious creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings.");
-            conditionDescription.Add("The creature drops whatever it’s holding and falls prone.");
-            conditionDescription.Add("The creature automatically fails Strength and Dexterity saving throws.");
-            conditionDescription.Add("Attack rolls against the creature have advantage.");
-            conditionDescription.Add("Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 1";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 2";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            conditionDescription.Add("Speed halved");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 3";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            conditionDescription.Add("Speed halved");
-            conditionDescription.Add("Disadvantage on Attack rolls and saving throws");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 4";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            conditionDescription.Add("Speed halved");
-            conditionDescription.Add("Disadvantage on Attack rolls and saving throws");
-            conditionDescription.Add("Hit point maximum halved");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 5";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            conditionDescription.Add("Speed halved");
-            conditionDescription.Add("Disadvantage on Attack rolls and saving throws");
-            conditionDescription.Add("Hit point maximum halved");
-            conditionDescription.Add("Speed reduced to 0");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Exhaustion Level 6";
-            conditionDescription.Add("Disadvantage on Ability Checks");
-            conditionDescription.Add("Speed halved");
-            conditionDescription.Add("Disadvantage on Attack rolls and saving throws");
-            conditionDescription.Add("Hit point maximum halved");
-            conditionDescription.Add("Speed reduced to 0");
-            conditionDescription.Add("Death");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Advantage (manual)";
-            conditionDescription.Add("Roll 2d20 and choose the highest result.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
-
-            condition = new Condition();
-            conditionDescription = new List<string>();
-            condition.name = "Disadvantage (manual)";
-            conditionDescription.Add("Roll 2d20 and choose the lowest result.");
-            condition.descriptionList = conditionDescription;
-            defaultConditions.Add(condition);
+            
 
 
             foreach (var item in defaultConditions)
@@ -335,7 +152,7 @@ namespace HomebrewCombat
 
             if (lstMonsterList.SelectedIndex != -1)
             {
-                var monster = monsterList.First(x => x.name == lstMonsterList.SelectedItem.ToString());
+                var monster = monsterList.First(x => x.Name == lstMonsterList.SelectedItem.ToString());
                 ShowDetails(monster);
             }
 
@@ -349,18 +166,18 @@ namespace HomebrewCombat
             int listIndex = lstMonsterList.SelectedIndex;
             lstMonsterList.Items.Clear();
 
-            var sortedList = monsterList.OrderBy(x => x.name);
+            var sortedList = monsterList.OrderBy(x => x.Name);
 
             foreach (var monster in sortedList)
             {
-                lstMonsterList.Items.Add(monster.name);
+                lstMonsterList.Items.Add(monster.Name);
             }
 
 
             try
             {
                 lstMonsterList.SelectedIndex = listIndex;
-                var monster = monsterList.First(x => x.name == lstMonsterList.SelectedItem.ToString());
+                var monster = monsterList.First(x => x.Name == lstMonsterList.SelectedItem.ToString());
                 ShowDetails(monster);
 
 
@@ -389,7 +206,7 @@ namespace HomebrewCombat
             {
                 foreach (var monster in searchList)
                 {
-                    lstMonsterList.Items.Add(monster.name);
+                    lstMonsterList.Items.Add(monster.Name);
                 }
 
             }
@@ -510,107 +327,66 @@ namespace HomebrewCombat
 
 
 
-            var fullDescription = @"Name: " + monster.name + @"
-Description: " + monster.description + @" 
-Size: " + monster.size + @"
-Type: " + monster.type + @"
-Alignment: " + monster.alignment + @"
-Senses: " + monster.senses + @"
-Initiative modifier: " + monster.initiative + @"
-AC: " + monster.AC + @"
-HP: " + monster.HP + @"
+            var fullDescription = @"Name: " + monster.Name + @"
 CR: " + monster.CR + @"
-Speed: " + monster.speed + @"
+XP: " + monster.XP + @"
+Race: " + monster.Race + @"
+Class: " + monster.Class1 + " " + monster.Class1Lvl + " / " + monster.Class2 + " " + monster.Class2Lvl + @"
+Alignment: " + monster.Alignment + @"
+Size: " + monster.Size + @"
+Speed: " + monster.Speed + @"
+Fly Maneuverability: " + monster.FlyManeuverability + @"
+Special Movement: " + monster.SpeedSpecial + @"
+Type: " + monster.Type + @"
+Group: " + monster.Group + @"
+Subtypes: " + monster.Subtype1 + ", " + monster.Subtype2 + ", " + monster.Subtype3 + ", " + monster.Subtype4 + ", " + monster.Subtype5 + ", " + monster.Subtype6 + @"
+AC: " + monster.AC + @"
+Touch AC: " + monster.ACTouch + @"
+Flat-Footed AC: " + monster.ACFlatFooted + @"
+HP: " + monster.HP + @"
+Hit Dice: " + monster.HD + @"
+Fortitude: " + monster.Fortitude + @"
+Reflex: " + monster.Reflex + @"
+Will: " + monster.Will + @"
+Speed: " + monster.Space + @"
 STR: " + monster.STR + @"
 DEX: " + monster.DEX + @"
 CON: " + monster.CON + @"
 INT: " + monster.INT + @"
 WIS: " + monster.WIS + @"
 CHA: " + monster.CHA + @"
-Saving Throws: " + monster.save + @"
-Skills: " + monster.skill + @"
-Passive Perception: " + monster.passive + @"
-Languages: " + monster.languages + @"
-Physical Immunities: " + monster.immune + @"
-Condition Immunities: " + monster.conditionImmune + @"
-Resistances: " + monster.resist + @"
-Vulnerabilites: " + monster.vulnerable + @"
-Spells: " + monster.spells + @"
-Spell Slots: " + monster.slots;
+Melee: " + monster.Melee + @"
+Gear: " + monster.Gear + " & "+ monster.OtherGear + @"
+Reach: " + monster.Reach + @"
+Ranged: " + monster.Ranged + @"
+Racial Modifiers: " + monster.RacialMods + @"
+Special Qualities: " + monster.SQ + @"
+Environment: " + monster.Environment + @"
+Organization: " + monster.Organization + @"
+Languages: " + monster.Languages + @"
+Skills: " + monster.Skills + @"
+Feats: " + monster.Feats + @"
+Monster ID: " + monster.ID + " from " + monster.Source;
 
-
-
-            fullDescription += @"
-
-Traits: 
-";
-
-            foreach (var trait in monster.traitList)
-            {
-                fullDescription += @"
-" + trait.name + @"
-";
-
-                foreach (var text in trait.textList)
-                {
-                    if (text.Equals(""))
-                    {
-                        continue;
-                    }
-                    fullDescription += @"
-" + text + @"
-";
-                }
-
-            }
-
-            fullDescription += @"
-
-
-Actions: 
-";
-
-
-            foreach (var action in monster.actionList)
-            {
-                fullDescription += @"
-" + action.name + @"
-" + action.text + @"
-";
-            }
-
-            fullDescription += @"
-
-
-Reactions: 
-";
-
-
-            foreach (var reaction in monster.reactionList)
-            {
-                fullDescription += @"
-" + reaction.name + @"
-" + reaction.text + @"
-";
-            }
-
-            fullDescription += @"
-
-
-Legendary Actions: 
-";
-
-
-            foreach (var legendary in monster.legendaryList)
-            {
-                fullDescription += @"
-" + legendary.name + @"
-" + legendary.text + @"
-";
-            }
+           
 
             rtboxDetails.Text = fullDescription;
 
+        }
+
+        private int CalculateInitMod(Monster monster)
+        {
+            var modifier = 0;
+
+            if (monster.Feats.Contains("Improved Initiative"))
+                modifier = modifier + 4;
+
+            if (int.TryParse(monster.DEX, out int dex))
+            {
+                modifier = modifier + ((dex - 10) / 2);
+            }
+
+            return modifier;
         }
 
         private void btnAddToCombat_Click(object sender, EventArgs e)
@@ -623,12 +399,14 @@ Legendary Actions:
             {
                 Random initd20 = new Random();
                 Combatant combatant = new Combatant();
-                var monster = monsterList.First(x => x.name == lstMonsterList.SelectedItem.ToString());
+                var monster = monsterList.First(x => x.Name == lstMonsterList.SelectedItem.ToString());
 
                 int init = 0;
                 try
                 {
-                    init = (initd20.Next(1, 21) + int.Parse(monster.initiative));
+                    var modifier = CalculateInitMod(monster);
+
+                    init = (initd20.Next(1, 21) + modifier);
                 }
                 catch
                 {
@@ -638,12 +416,12 @@ Legendary Actions:
 
                 string[] hpSplit = monster.HP.Split(new string[] { " " }, StringSplitOptions.None);
 
-                combatant.name = monster.name;
+                combatant.name = monster.Name;
                 combatant.initiative = init.ToString();
                 combatant.ID = combatantID + 1;
                 combatant.HP = 0;
                 combatant.AC = monster.AC;
-                combatant.save = monster.save;
+                combatant.save = "Fort: "+monster.Fortitude+", Ref: "+monster.Reflex+", Will: "+monster.Will;
                 try
                 {
                     combatant.HP = int.Parse(hpSplit[0]);
@@ -931,7 +709,7 @@ Legendary Actions:
 
                 try
                 {
-                    var monster = monsterList.First(x => x.name == combatMonster);
+                    var monster = monsterList.First(x => x.Name == combatMonster);
                     ShowDetails(monster);
                 }
                 catch
@@ -1016,7 +794,7 @@ Legendary Actions:
             Monster monster = new Monster();
             try
             {
-                monster = monsterList.First(x => x.name == lstMonsterList.SelectedItem.ToString());
+                monster = monsterList.First(x => x.Name == lstMonsterList.SelectedItem.ToString());
             }
             catch
             {
@@ -1070,7 +848,7 @@ Legendary Actions:
                 {
                     string name = lstMonsterList.SelectedItem.ToString();
 
-                    Monster monster = monsterList.Find(x => x.name == name);
+                    Monster monster = monsterList.Find(x => x.Name == name);
 
                     monsterList.Remove(monster);
 
@@ -1118,7 +896,7 @@ Legendary Actions:
             {
                 try
                 {
-                    List<Monster> searchList = monsterList.FindAll(x => x.name.ToLower().Contains(txtMonsterSearch.Text.ToLower()));
+                    List<Monster> searchList = monsterList.FindAll(x => x.Name.ToLower().Contains(txtMonsterSearch.Text.ToLower()));
                     ShowSearchList(searchList);
 
 
@@ -1174,12 +952,13 @@ Legendary Actions:
             {
                 Random initd20 = new Random();
                 Combatant combatant = new Combatant();
-                var monster = monsterList.First(x => x.name == lstMonsterList.SelectedItem.ToString());
+                var monster = monsterList.First(x => x.Name == lstMonsterList.SelectedItem.ToString());
 
                 int init = 0;
                 try
                 {
-                    init = (initd20.Next(1, 21) + int.Parse(monster.initiative));
+                    var modifier = CalculateInitMod(monster);
+                    init = (initd20.Next(1, 21) + modifier);
                 }
                 catch
                 {
@@ -1189,12 +968,12 @@ Legendary Actions:
 
                 string[] hpSplit = monster.HP.Split(new string[] { " " }, StringSplitOptions.None);
 
-                combatant.name = monster.name;
+                combatant.name = monster.Name;
                 combatant.initiative = init.ToString();
                 combatant.ID = combatantID + 1;
                 combatant.HP = 0;
                 combatant.AC = monster.AC;
-                combatant.save = monster.save;
+                combatant.save = "Fort: " + monster.Fortitude + ", Ref: " + monster.Reflex + ", Will: " + monster.Will;
                 try
                 {
                     combatant.HP = int.Parse(hpSplit[0]);

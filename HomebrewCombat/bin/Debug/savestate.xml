@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfCombatant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfCombatant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Combatant>
+    <name>Aberrant</name>
+    <initiative>19</initiative>
+    <ID>1</ID>
+    <HP>60</HP>
+    <save>Fort: 9, Ref: 1, Will: 4</save>
+    <AC>19</AC>
+  </Combatant>
+  <Combatant>
+    <name>Accuser</name>
+    <initiative>14</initiative>
+    <ID>2</ID>
+    <HP>30</HP>
+    <save>Fort: 6, Ref: 10, Will: 3</save>
+    <AC>17</AC>
+  </Combatant>
+  <Combatant>
+    <name>Accuser</name>
+    <initiative>22</initiative>
+    <ID>3</ID>
+    <HP>30</HP>
+    <save>Fort: 6, Ref: 10, Will: 3</save>
+    <AC>17</AC>
+  </Combatant>
+</ArrayOfCombatant>

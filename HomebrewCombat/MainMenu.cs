@@ -86,9 +86,9 @@ namespace HomebrewCombat
             
             foreach (Monster monster in Program.mainForm.monsterList)
             {
-                string testName = monster.name;
+                string testName = monster.Name;
 
-                List<Monster> found = newList.Where(x => x.name == testName).ToList();
+                List<Monster> found = newList.Where(x => x.Name == testName).ToList();
 
                 if (found.Count < 1)
                 {
